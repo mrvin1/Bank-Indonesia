@@ -15,16 +15,11 @@ class Iku extends Migration
     {
         Schema::create('ikus', function (Blueprint $table) {
             $table->id();
-            $table->string('lokasi');
-            $table->string('judul');
-            $table->longText('tujuan');
-            $table->longText('notulen');
-            $table->longText('kesimpulan');
-            $table->longText('linklampiran');
-            $table->string('file1');
-            $table->string('file2');
-            $table->string('file3');
-            $table->timestamps();
+            $table->unsignedBigInteger('indikator');
+            $table->foreign('indikator')->references('id')->on('indikatoriku');
+            $table->longText('realisasi');
+            $table->string('status');
+            $table->longText('keterangan');
             $table->dateTime('periode', $precision = 0);
         });
     }

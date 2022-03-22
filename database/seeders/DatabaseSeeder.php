@@ -17,6 +17,8 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             AgendaSeeder::class,
             MeetingSeeder::class,
+            JenisikuSeeder::class,
+            IndikatorikuSeeder::class,
         ]);
     }
 }

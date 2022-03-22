@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-
+use App\Models\IKU;
 class IkuSeeder extends Seeder
 {
     /**
@@ -13,6 +13,8 @@ class IkuSeeder extends Seeder
      */
     public function run()
     {
-        //
+        IKU::create([
+            //
+         ]);
     }
 }
