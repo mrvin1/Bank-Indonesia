@@ -1,5 +1,5 @@
 <header>
-    <nav class="navbar navbar-light light-blue lighten-4" >
+    <nav class="navbar navbar-light light-blue lighten-4" style="background-color: rgb(238, 237, 165);">
         <a class="navbar-brand"style="text-decoration: none" href="/home"><img src="{{Storage::url('assetsweb/logo BI.png')}}" alt="" style="max-width: 50%"></a>
     <div style="display: flex; justify-content: flex-end; padding-left: 40%">
         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16" style="padding-right: 10%">

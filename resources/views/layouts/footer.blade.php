@@ -1,4 +1,4 @@
-<footer class="text-center text-lg-start" style="margin-top: 1rem">
+<footer class="text-center text-lg-start" style="background-color: rgb(192, 237, 240)">
     <div class="text-center p-3">
             Bank Indonesia Kpw. Purwokerto <br>
         Jl. Jend. Gatot Subroto No.98 Purwokerto

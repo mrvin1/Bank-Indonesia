@@ -17,4 +17,6 @@ Auth::routes();
 Route::get('/', function () {
     return redirect('/login');
 });
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('user');
+Route::get('/notice', [App\Http\Controllers\AnnouncementController::class, 'viewAnnouncement'])->name('notice')->middleware('user');
