@@ -2,9 +2,11 @@
     <nav class="navbar navbar-light light-blue lighten-4" style="background-color: rgb(238, 237, 165);">
         <a class="navbar-brand"style="text-decoration: none" href="/home"><img src="{{Storage::url('assetsweb/logo BI.png')}}" alt="" style="max-width: 50%"></a>
     <div style="display: flex; justify-content: flex-end; padding-left: 40%">
-        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16" style="padding-right: 10%">
+      <a href="{{route('notice')}}" style="padding-right: 2%">  
+      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16" style="padding-right: 10%">
             <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"/>
           </svg>
+        </a>
         <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Pengguna 1
