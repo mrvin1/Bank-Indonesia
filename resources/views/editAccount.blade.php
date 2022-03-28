@@ -17,8 +17,8 @@
     width: 80%;
 }
 </style>
-<div class="content"style="background-image: url('{{Storage::url('assetsweb/indonesian.jpg')}}'); background-size: 100%; background-repeat: no-repeat; backdrop-filter: blur(20px);height: 100%; width: 100%;">
-    <div class="blur" style="background: rgba(255, 255, 255, 0.55); backdrop-filter: blur(2px);height: 100%;width: 100%;">
+<div class="content"style="background-image: url('{{Storage::url('assetsweb/indonesian.jpg')}}'); background-size: 100%;  backdrop-filter: blur(20px); height: 100vh">
+    <div class="blur" style="background: rgba(240, 145, 145, 0.55); backdrop-filter: blur(2px);height: 100%;width: 100%;">
         <h1 style="text-align: center; padding-top: 2%; padding-bottom: 3%">Edit Akun</h1>
 
 
@@ -49,7 +49,7 @@
             </div>
         </form>
         <form action="" method="POST" style="display: flex;">
-            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">*Pass reset: purwokerto111</label>
+            <label for="password-confirm" class="col-md-4 col-form-label text-md-right" style="font-weight: bold">*Pass reset: purwokerto111</label>
             <div class="form-group row mb-0 " style="display: block;margin-left: auto;margin-right: auto;width: 40%;">
                 <div class="col-md-6 offset-md-4">
                     <input id="password" type="password" class="form-control" name="password" hidden value="purwokerto111">

@@ -17,8 +17,8 @@
     width: 80%;
 }
 </style>
-<div class="content"style="background-image: url('{{Storage::url('assetsweb/Indonesian.jpg')}}'); background-size: 100%; background-repeat: no-repeat; backdrop-filter: blur(20px);height: 100%; width: 100%;">
-    <div class="blur" style="background: rgba(255, 255, 255, 0.55); backdrop-filter: blur(2px);height: 100%;width: 100%;">
+<div class="content"style="background-image: url('{{Storage::url('assetsweb/Indonesian.jpg')}}'); background-size: 100%;  backdrop-filter: blur(20px); height: 100vh">
+    <div class="blur" style="background: rgba(240, 145, 145, 0.55); backdrop-filter: blur(2px);height: 100%;width: 100%;">
         <h1 style="text-align: center; padding-top: 2%;">Daftar Akun</h1>
         <div class="row justify-content-end" style="padding: 6%;" >
             <div class="col-md">
@@ -43,6 +43,7 @@
                             </td>
                         </tr>
                         </tbody>
+                        {{-- {{$books->links()}} --}}
                     </table>
                 </div>
             </div>

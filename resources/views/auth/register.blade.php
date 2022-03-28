@@ -2,8 +2,8 @@
 @include('layouts.navigation')
 <title>Tambah Akun</title>
 
-<div class="content"style="background-image: url('{{Storage::url('assetsweb/indonesian.jpg')}}'); background-size: 100%; background-repeat: no-repeat; backdrop-filter: blur(20px);height: 100%; width: 100%;">
-    <div class="blur" style="background: rgba(255, 255, 255, 0.55); backdrop-filter: blur(2px);height: 100%;width: 100%;">
+<div class="content"style="background-image: url('{{Storage::url('assetsweb/indonesian.jpg')}}'); background-size: 100%;  backdrop-filter: blur(20px); height: 100vh"">
+    <div class="blur" style="background: rgba(240, 145, 145, 0.55); backdrop-filter: blur(2px);height: 100%;width: 100%;">
             <div class="container" style="padding-top:4%; padding-bottom: 4% ">
                 <div class="row justify-content-center">
                     <div class="col-md-8">

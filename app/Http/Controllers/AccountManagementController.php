@@ -16,4 +16,8 @@ class AccountManagementController extends Controller
     {
         return view('editAccount');
     }
+    public function changePassword(Request $req)
+    {
+        return view('changePassword');
+    }
 }
