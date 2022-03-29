@@ -24,24 +24,26 @@
                 <div class="form-group">
                     <a class="btn btn-dark" href="" role="button" style="position: absolute;right: 80px;width: 100px;margin-bottom: 3%;">Edit IKU</a>
                 </div>
-                <div class="form-group">
-                    <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Periode: </label>
-                </div>
-                <div class="form-group">
-                    <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Jenis IKU: </label>
-                </div>
-                <div class="form-group">
-                    <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Indikator: </label>
-                </div>
-                <div class="form-group">
-                    <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Realisasi: </label>
-                </div>
-                <div class="form-group">
-                    <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Status: </label>
-                </div>
-                <div class="form-group">
-                    <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Keterangan: </label>
-                </div>
+                    <div class="form-group">
+                        <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Periode: </label>
+                    </div> 
+                    <div class="form-group">
+                        <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Jenis IKU: </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Indikator: </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Realisasi: </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Status: </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Keterangan: </label>
+                    </div>
+                
+                
         </div>
         
     </div>   

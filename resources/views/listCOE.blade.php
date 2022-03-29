@@ -11,16 +11,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.js"></script>
 </head>
 <body>
-  
-<div class="container">
-    <br />
-    <h1 class="text-center text-primary">Calendar of Event - COE</h1>
-    <br />
-
-    <div id="calendar"></div>
-
-</div>
-   
+    <div class="content"style="background-image: url('{{Storage::url('assetsweb/coe.jpg')}}'); background-size: 100%;  backdrop-filter: blur(20px); height: 130%">
+        <div class="blur" style="background:rgba(235, 238, 192, 0.55) backdrop-filter: blur(5px);height: 100%;width: 100%;"> 
+            <div class="container" >
+                <br />
+                <h1 class="text-center text-primary">Calendar of Event - COE</h1>
+                <br />
+                <div id="calendar"></div>
+            </div>
+        </div>
+    </div>
 <script>
 
 $(document).ready(function () {
@@ -49,4 +49,4 @@ $(document).ready(function () {
 </script>
   
 </body>
-@extends('layouts.footer')
+@include('layouts.footer')

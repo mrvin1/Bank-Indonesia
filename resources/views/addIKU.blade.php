@@ -17,7 +17,7 @@
     width: 80%;
 }
 </style>
-<div class="content"style="background-image: url('{{Storage::url('assetsweb/mountain.jpg')}}'); background-size: 100%;  backdrop-filter: blur(20px); height: 100vh">
+<div class="content"style="background-image: url('{{Storage::url('assetsweb/mountain.jpg')}}'); background-size: 100%;  backdrop-filter: blur(20px); height: 100%">
     <div class="blur" style="background: rgba(240, 145, 145, 0.55); backdrop-filter: blur(2px);height: 100%;width: 100%;">
         <div class="cnt" style="padding-left: 4% ">
                 <h1 style="text-align: center; padding-top: 2%; padding-bottom: 3%">Tambah IKU</h1>
@@ -57,7 +57,7 @@
                 </div>
                 <div class="form-group">
                     <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Keterangan</label>
-                    <textarea name="ket" id="ket" cols="100" rows="10"></textarea>
+                    <textarea name="ket" id="ket" cols="45" rows="5"></textarea>
                 </div>
                 <div class="form-group"  style="display: block; margin-left: 50%;margin-right: auto;width: 40%;">
                     <button type="submit" class="btn btn-success">Simpan</button>

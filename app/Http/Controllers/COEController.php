@@ -9,6 +9,12 @@ class COEController extends Controller
 {
    public function index(Request $req){
        return view('listCOE');
-   }     
+   }  
+   public function addCOE(){
+       return view('addCOE');
+   }   
+   public function detailCOE(){
+       return view('detailCOE');
+   }
     
 }

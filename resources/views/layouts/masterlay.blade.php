@@ -30,6 +30,7 @@
             padding: 0.7rem;
             border-radius: 15%
         }
+
     </style>
      
     <!-- Scripts -->
