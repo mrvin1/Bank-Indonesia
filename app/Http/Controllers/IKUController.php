@@ -12,4 +12,10 @@ class IKUController extends Controller
     public function addIKU(){
         return view('addIKU');
     }
+    public function detailIKU(){
+        return view('detailIKU');
+    }
+    public function editIKU(){
+        return view('editIKU');
+    }
 }

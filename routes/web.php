@@ -27,3 +27,6 @@ Route::get('/editaccount/{idx}', [App\Http\Controllers\AccountManagementControll
 Route::get('/changepassword', [App\Http\Controllers\AccountManagementController::class, 'changePassword'])->name('changePassword')->middleware('user');
 Route::get('/listiku', [App\Http\Controllers\IKUController::class, 'listIKU'])->name('listIKU')->middleware('user');
 Route::get('/addiku', [App\Http\Controllers\IKUController::class, 'addIKU'])->name('addIKU')->middleware('user');
+Route::get('/detailiku/{idx}', [App\Http\Controllers\IKUController::class, 'detailIKU'])->name('detailIKU')->middleware('user');
+Route::get('/editiku/{idx}', [App\Http\Controllers\IKUController::class, 'editIKU'])->name('editIKU')->middleware('user');
+Route::get('/coe', [App\Http\Controllers\COEController::class, 'index'])->name('viewCOE')->middleware('user');

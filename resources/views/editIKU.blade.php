@@ -1,6 +1,6 @@
 @extends('layouts.masterlay')
 @include('layouts.navigation')
-<title>Tambah IKU</title>
+<title>Edit IKU</title>
 <style>
 .box-part{
     background:#FFF;
@@ -20,7 +20,7 @@
 <div class="content"style="background-image: url('{{Storage::url('assetsweb/mountain.jpg')}}'); background-size: 100%;  backdrop-filter: blur(20px); height: 100vh">
     <div class="blur" style="background: rgba(240, 145, 145, 0.55); backdrop-filter: blur(2px);height: 100%;width: 100%;">
         <div class="cnt" style="padding-left: 4% ">
-                <h1 style="text-align: center; padding-top: 2%; padding-bottom: 3%">Tambah IKU</h1>
+                <h1 style="text-align: center; padding-top: 2%; padding-bottom: 3%">Edit IKU</h1>
             <form action="" method="POST">
                 @csrf
                 <div class="form-group">
