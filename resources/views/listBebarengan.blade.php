@@ -21,7 +21,7 @@
     <div class="blur" style="background: rgba(184, 165, 83, 0.55); backdrop-filter: blur(2px);height: 100%;width: 100%;">
         <h1 style="text-align: center; padding-top: 2%;">Daftar Bebarengan</h1>
         <div class="b" style="display: inline-block;position: absolute;right: 0px;width: 300px;">
-            <a class="btn btn-success" href="" role="button">Tambah</a>
+            <a class="btn btn-success" href="{{route('addBebarengan')}}" role="button">Tambah</a>
         </div>
         <div class="row justify-content-end" style="padding: 2% 6%;" >
             <div class="col-md">

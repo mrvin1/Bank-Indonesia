@@ -37,3 +37,5 @@ Route::get('/bebarengan', [App\Http\Controllers\BebarenganController::class, 'vi
 Route::get('/addbebarengan', [App\Http\Controllers\BebarenganController::class, 'addBebarengan'])->name('addBebarengan')->middleware('user');
 Route::get('/detailbebarengan/{idx}', [App\Http\Controllers\BebarenganController::class, 'detailBebarengan'])->name('detailBebarengan')->middleware('user');
 Route::get('/editbebarengan/{idx}', [App\Http\Controllers\BebarenganController::class, 'editBebarengan'])->name('editBebarengan')->middleware('user');
+Route::get('/menukpw', [App\Http\Controllers\ProfilKpwController::class, 'viewMenu'])->name('viewMenuKpw')->middleware('user');
+Route::get('/menuwil', [App\Http\Controllers\ProfilWilayahKerjaController::class, 'viewMenu'])->name('viewMenuWil')->middleware('user');

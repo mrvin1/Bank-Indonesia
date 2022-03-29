@@ -12,11 +12,11 @@
               Pengguna 1
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-              <a class="dropdown-item" type="button">Manajemen Akun</a>
+              <a class="dropdown-item" type="button" href="{{route('accountManager')}}">Manajemen Akun</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" type="button">Ganti Password</a>
+              <a class="dropdown-item" type="button" href="{{route('changePassword')}}">Ganti Password</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="/logout" type="button">Keluar</a>
+              <a class="dropdown-item" href="{{route('logout')}}" type="button">Keluar</a>
             </div>
           </div>
     </div>      
@@ -32,19 +32,19 @@
                       Profil
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="#">Profil Wilayah Kerja</a>
+                      <a class="dropdown-item" href="{{route('viewMenuWil')}}">Profil Wilayah Kerja</a>
                       <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Profil Kpw. Purwokerto</a>
+                      <a class="dropdown-item" href="{{route('viewMenuKpw')}}">Profil Kpw. Purwokerto</a>
                     </div>
                   </li>
                 <li class="nav-item" style="padding: 0%">
-                <a class="nav-link" href="#">IKU</a>
+                <a class="nav-link" href="{{route('listIKU')}}">IKU</a>
                 </li>
                 <li class="nav-item" style="padding: 0%">
-                <a class="nav-link" href="#">COE</a>
+                <a class="nav-link"href="{{route('viewCOE')}}">COE</a>
                 </li>
                 <li class="nav-item" style="padding: 0%">
-                    <a class="nav-link" href="#">Bebarengan</a>
+                    <a class="nav-link" href="{{route('viewBebarengan')}}">Bebarengan</a>
                 </li>
             </ul>
             <!-- Links -->

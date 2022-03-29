@@ -31,6 +31,7 @@ a{
 }
 
 
+
 </style>
 <title>Home</title>
 
@@ -41,26 +42,26 @@ a{
             <div class="container">
                 <div class="card-deck">
                     <div class="row">
-                        <div class="card">
-                        <img class="card-img-top" src="{{Storage::url('assetsweb/map.png')}}" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">Profil Wilayah Kerja</h5>
+                            <div class="card">
+                                <a href="{{route('viewMenuWil')}}"><img class="card-img-top" src="{{Storage::url('assetsweb/map.png')}}" alt="Card image cap"></a>
+                                <div class="card-body">
+                                    <h5 class="card-title">Profil Wilayah Kerja</h5>
+                                </div>
                             </div>
-                        </div>
                         <div class="card">
-                            <img class="card-img-top" src="{{Storage::url('assetsweb/building.png')}}" alt="Card image cap">
+                            <a href="{{route('viewMenuKpw')}}"><img class="card-img-top" src="{{Storage::url('assetsweb/building.png')}}" alt="Card image cap"></a>
                             <div class="card-body">
                                 <h5 class="card-title">Profil Kpw. Purwokerto</h5>
                             </div>
                         </div>
                         <div class="card">
-                            <img class="card-img-top" src="{{Storage::url('assetsweb/running.png')}}" alt="Card image cap">
+                            <a href="{{route('listIKU')}}"><img class="card-img-top" src="{{Storage::url('assetsweb/running.png')}}" alt="Card image cap"></a>
                             <div class="card-body">
                                 <h5 class="card-title">IKU</h5>
                             </div>
                         </div>
                         <div class="card">
-                            <img class="card-img-top" src="{{Storage::url('assetsweb/calendar.png')}}" alt="Card image cap">
+                            <a href="{{route('viewCOE')}}"><img class="card-img-top" src="{{Storage::url('assetsweb/calendar.png')}}" alt="Card image cap"></a>
                             <div class="card-body">
                                 <h5 class="card-title">Calendar of Event - COE</h5>
                             </div>
@@ -68,25 +69,25 @@ a{
                     </div>
                     <div class="row" style="padding-top: 2%">
                         <div class="card">
-                            <img class="card-img-top" src="{{Storage::url('assetsweb/meeting.png')}}" alt="Card image cap">
+                            <a href="{{route('viewBebarengan')}}"><img class="card-img-top" src="{{Storage::url('assetsweb/meeting.png')}}" alt="Card image cap"></a>
                             <div class="card-body">
                                 <h5 class="card-title">Bebarengan</h5>
                             </div>
                         </div>
                         <div class="card">
-                            <img class="card-img-top" src="{{Storage::url('assetsweb/key-chain.png')}}" alt="Card image cap">
+                            <a href="{{route('changePassword')}}"><img class="card-img-top" src="{{Storage::url('assetsweb/key-chain.png')}}" alt="Card image cap"></a>
                             <div class="card-body">
                                 <h5 class="card-title">Ganti Password</h5>
                             </div>
                         </div>
                         <div class="card">
-                            <img class="card-img-top" src="{{Storage::url('assetsweb/skills.png')}}" alt="Card image cap">
+                            <a href="{{route('accountManager')}}"><img class="card-img-top" src="{{Storage::url('assetsweb/skills.png')}}" alt="Card image cap"></a>
                             <div class="card-body">
                                 <h5 class="card-title">Manajemen Akun</h5>
                             </div>
                         </div>
                         <div class="card">
-                            <img class="card-img-top" src="{{Storage::url('assetsweb/exit.png')}}" alt="Card image cap">
+                            <a href="{{route('logout')}}"><img class="card-img-top" src="{{Storage::url('assetsweb/exit.png')}}" alt="Card image cap"></a>
                             <div class="card-body">
                                 <h5 class="card-title">Keluar</h5>
                             </div>

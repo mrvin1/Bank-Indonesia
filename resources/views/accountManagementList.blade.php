@@ -16,12 +16,12 @@
     margin: 0 auto;
     width: 80%;
 }
-</style>
+</style> 
 <div class="content"style="background-image: url('{{Storage::url('assetsweb/Indonesian.jpg')}}'); background-size: 100%;  backdrop-filter: blur(20px); height: 100vh">
-    <div class="blur" style="background: rgba(240, 199, 145, 0.55); backdrop-filter: blur(2px);height: 100%;width: 100%;">
+    <div class="blur" style="background: rgba(240, 145, 145, 0.55); backdrop-filter: blur(2px);height: 100%;width: 100%;">
         <h1 style="text-align: center; padding-top: 2%;">Daftar Akun</h1>
         <div class="b" style="display: inline-block;position: absolute;right: 0px;width: 300px;">
-            <a class="btn btn-success" href="" role="button">Tambah</a>
+            <a class="btn btn-success" href="{{route('addAccount')}}" role="button">Tambah</a>
         </div>
         <div class="row justify-content-end" style="padding: 2% 6%;" >
             <div class="col-md">

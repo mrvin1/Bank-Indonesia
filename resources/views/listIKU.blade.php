@@ -25,7 +25,7 @@ input[type=search]::-webkit-search-cancel-button {
     <div class="blur" style="background: rgba(245, 243, 243, 0.55); backdrop-filter: blur(2px);height: 100%;width: 100%;">
         <h1 style="text-align: center; padding-top: 2%;">Daftar IKU</h1>
         <div class="b" style="display: inline-block;position: absolute;right: 0px;width: 300px;">
-            <a class="btn btn-success" href="" role="button">Tambah</a>
+            <a class="btn btn-success" href="{{route('addIKU')}}" role="button">Tambah</a>
             <a class="btn btn-dark" href="" role="button">Export .xlsx</a>
         </div>
         <div class="row" style="padding: 3%; flex-direction: row" >
