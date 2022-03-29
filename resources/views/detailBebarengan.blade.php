@@ -1,6 +1,6 @@
 @extends('layouts.masterlay')
 @include('layouts.navigation')
-<title>Detil COE</title>
+<title>Detil Bebarengan</title>
 <style>
 .box-part{
     background:#FFF;
@@ -24,28 +24,32 @@ hr {
 }
 
 </style>
-<div class="content"style="background-image: url('{{Storage::url('assetsweb/coe.jpg')}}'); background-size: 100%;  backdrop-filter: blur(20px); height: 100vh">
-    <div class="blur" style="background: rgba(235, 238, 192, 0.55); backdrop-filter: blur(2px);height: 100%;width: 100%;">
+<div class="content"style="background-image: url('{{Storage::url('assetsweb/meeting.jpg')}}'); background-size: 100%;  backdrop-filter: blur(20px); height: 100vh">
+    <div class="blur" style="background: rgba(184, 165, 83, 0.55); backdrop-filter: blur(2px);height: 100%;width: 100%;">
         <div class="cnt" style="padding-left: 4%; font-size: 25px; ">
-                <h1 style="text-align: center; padding-top: 2%; padding-bottom: 3%">Tampil COE</h1>
+                <h1 style="text-align: center; padding-top: 2%; padding-bottom: 3%">Detil Bebarengan</h1>
                 <div class="form-group">
-                    <a class="btn btn-dark" href="" role="button" style="position: absolute;right: 80px;width: 100px;margin-bottom: 3%;">Edit COE</a>
+                    <a class="btn btn-dark" href="" role="button" style="position: absolute;right: 80px;width: 200px;margin-bottom: 3%;">Edit Bebarengan</a>
                 </div>
                 <div class="form-group">
                     <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Tanggal: </label>
-                    <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Sampai: </label>
+                    <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Lokasi: </label>
                 </div>
                 <hr style="border-width: 2px; border-color: black">
                 <div class="form-group">
-                    <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Ditunjukkan ke: </label>
+                    <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Judul Rapat: </label>
                 </div>
                 <hr style="border-width: 2px; border-color: black">
                 <div class="form-group">
-                    <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Aktivitas: </label>
+                    <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Tujuan: </label>
                 </div>
                 <hr style="border-width: 2px; border-color: black">
                 <div class="form-group">
-                    <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Keterangan: </label>
+                    <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Notulen: </label>
+                </div>
+                <hr style="border-width: 2px; border-color: black">
+                <div class="form-group">
+                    <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Kesimpulan: </label>
                 </div>
                 <hr style="border-width: 2px; border-color: black">
                 <div class="form-group">

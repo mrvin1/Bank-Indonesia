@@ -32,3 +32,8 @@ Route::get('/editiku/{idx}', [App\Http\Controllers\IKUController::class, 'editIK
 Route::get('/coe', [App\Http\Controllers\COEController::class, 'index'])->name('viewCOE')->middleware('user');
 Route::get('/addcoe', [App\Http\Controllers\COEController::class, 'addCOE'])->name('addCOE')->middleware('user');
 Route::get('/detailcoe/{idx}', [App\Http\Controllers\COEController::class, 'detailCOE'])->name('detailCOE')->middleware('user');
+Route::get('/editcoe/{idx}', [App\Http\Controllers\COEController::class, 'editCOE'])->name('editCOE')->middleware('user');
+Route::get('/bebarengan', [App\Http\Controllers\BebarenganController::class, 'viewBebarengan'])->name('viewBebarengan')->middleware('user');
+Route::get('/addbebarengan', [App\Http\Controllers\BebarenganController::class, 'addBebarengan'])->name('addBebarengan')->middleware('user');
+Route::get('/detailbebarengan/{idx}', [App\Http\Controllers\BebarenganController::class, 'detailBebarengan'])->name('detailBebarengan')->middleware('user');
+Route::get('/editbebarengan/{idx}', [App\Http\Controllers\BebarenganController::class, 'editBebarengan'])->name('editBebarengan')->middleware('user');

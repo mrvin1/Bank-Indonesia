@@ -16,5 +16,8 @@ class COEController extends Controller
    public function detailCOE(){
        return view('detailCOE');
    }
+   public function editCOE(){
+       return view('editCOE');
+   }
     
 }

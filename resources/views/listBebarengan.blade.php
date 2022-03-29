@@ -1,6 +1,6 @@
 @extends('layouts.masterlay')
 @include('layouts.navigation')
-<title>Daftar Akun</title>
+<title>Daftar Bebarengan</title>
 <style>
 .box-part{
     background:#FFF;
@@ -17,9 +17,9 @@
     width: 80%;
 }
 </style>
-<div class="content"style="background-image: url('{{Storage::url('assetsweb/Indonesian.jpg')}}'); background-size: 100%;  backdrop-filter: blur(20px); height: 100vh">
-    <div class="blur" style="background: rgba(240, 199, 145, 0.55); backdrop-filter: blur(2px);height: 100%;width: 100%;">
-        <h1 style="text-align: center; padding-top: 2%;">Daftar Akun</h1>
+<div class="content"style="background-image: url('{{Storage::url('assetsweb/meeting.jpg')}}'); background-size: 100%;  backdrop-filter: blur(20px); height: 100vh">
+    <div class="blur" style="background: rgba(184, 165, 83, 0.55); backdrop-filter: blur(2px);height: 100%;width: 100%;">
+        <h1 style="text-align: center; padding-top: 2%;">Daftar Bebarengan</h1>
         <div class="b" style="display: inline-block;position: absolute;right: 0px;width: 300px;">
             <a class="btn btn-success" href="" role="button">Tambah</a>
         </div>
@@ -29,9 +29,8 @@
                     <table class="table table-striped table-dark">
                         <thead>
                         <tr>
-                            <th scope="col">Nama Pengguna</th>
-                            <th scope="col">NIP</th>
-                            <th scope="col">Role</th>
+                            <th scope="col">Pertanggal</th>
+                            <th scope="col">Judul Rapat</th>
                             <th scope="col">Aksi</th>
                         </tr>
                         </thead>
@@ -39,7 +38,6 @@
                         <tr>
                             <td>Mark</th>
                             <td>1</td>
-                            <td>admin</td>
                             <td>
                             <a class="btn btn-primary" href="genredetail/" role="button">Edit</a>
                             <a class="btn btn-danger" href="genredel/" role="button">Hapus</a>
