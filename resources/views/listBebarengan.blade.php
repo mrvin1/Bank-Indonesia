@@ -36,16 +36,22 @@
                         </thead>
                         <tbody>
                         <tr>
-                            <td>Mark</th>
-                            <td>1</td>
-                            <td>
-                            <a class="btn btn-primary" href="genredetail/" role="button">Edit</a>
-                            <a class="btn btn-danger" href="genredel/" role="button">Hapus</a>
-                            </td>
+                            @forelse ($bebarengan as $index => $value )
+                            <tr>
+                                <td>{{$bebarengan[$index]->tanggalrapat}}</td>
+                                <td>{{$bebarengan[$index]->judul}}</td>
+                                <td>
+                                    <a class="btn btn-primary" href="genredetail/" role="button">Edit</a>
+                                    <a class="btn btn-danger" href="genredel/" role="button">Hapus</a>
+                                </td>
+                            </tr>
+                            @empty
+                                Kosong..
+                            @endforelse                            
                         </tr>
                         </tbody>
-                        {{-- {{$books->links()}} --}}
                     </table>
+                    {{$bebarengan->links()}}
                 </div>
             </div>
         </div>

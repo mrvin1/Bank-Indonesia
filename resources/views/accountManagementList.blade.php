@@ -51,15 +51,13 @@
                                     </form>   
                                 </td>
                             </tr>
-                               
                             @empty
                                 <td>Tidak ada user</td>
                             @endforelse
-
                         </tr>
                         </tbody>
-                        {{$user->links()}}
                     </table>
+                    {{$user->links()}}
                 </div>
             </div>
         </div>
