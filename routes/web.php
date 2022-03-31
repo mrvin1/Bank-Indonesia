@@ -23,7 +23,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/notice', [App\Http\Controllers\AnnouncementController::class, 'viewAnnouncement'])->name('notice')->middleware('user');
 Route::get('/accountmanager', [App\Http\Controllers\AccountManagementController::class, 'viewList'])->name('accountManager')->middleware('admin');
 Route::get('/addaccount', [App\Http\Controllers\AccountManagementController::class, 'addAccount'])->name('addAccount')->middleware('admin');
+Route::post('/addaccount', [App\Http\Controllers\AccountManagementController::class, 'addAccountPost'])->name('addAccountPost')->middleware('admin');
 Route::get('/editaccount/{idx}', [App\Http\Controllers\AccountManagementController::class, 'editAccount'])->name('editAccount')->middleware('admin');
+Route::delete('/delaccount/{idx}', [App\Http\Controllers\AccountManagementController::class, 'delAccount'])->name('delAccount')->middleware('admin');
 Route::get('/changepassword', [App\Http\Controllers\AccountManagementController::class, 'changePassword'])->name('changePassword')->middleware('user');
 Route::get('/listiku', [App\Http\Controllers\IKUController::class, 'listIKU'])->name('listIKU')->middleware('user');
 Route::get('/addiku', [App\Http\Controllers\IKUController::class, 'addIKU'])->name('addIKU')->middleware('user');

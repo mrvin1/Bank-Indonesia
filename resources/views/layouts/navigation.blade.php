@@ -9,7 +9,9 @@
         </a>
         <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Pengguna 1
+            @if(auth()->user())
+              {{ auth()->user()->name }}
+             @endif
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
               <a class="dropdown-item" type="button" href="{{route('accountManager')}}">Manajemen Akun</a>

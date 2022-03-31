@@ -16,7 +16,6 @@ class Agendas extends Migration
         Schema::create('agendas', function (Blueprint $table) {
             $table->id();
             $table->string('email');
-            $table->foreign('email')->references('email')->on('users');
             $table->longText('aktivitas');
             $table->longText('keterangan');
             $table->longText('linklampiran');

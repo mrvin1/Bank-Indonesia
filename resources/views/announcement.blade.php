@@ -32,22 +32,27 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td colspan="2">Larry the Bird</td>
-                        </tr>
+                            @forelse ($agenda as $index => $value)
+                            <tr>
+                                <td>
+                                    {{$index+1}}
+                                </td>
+                                <td>
+                                    <a href="/detailcoe/{{$agenda[$index]->id}}" id="" value= $index>
+                                    {{$agenda[$index]->aktivitas}}
+                                </td>
+                                <td>
+                                    {{$agenda[$index]->deadline}}</a>
+                                </td>
+                                
+                            </tr>
+                            @empty
+                            <tr >
+                                <td>Tidak ada pemberitahuan</td>
+                            </tr>
+                        @endforelse 
                         </tbody>
-                        {{-- {{$books->links()}} --}}
+                        {{$agenda->links()}}
                     </table>
                 </div>
             </div>

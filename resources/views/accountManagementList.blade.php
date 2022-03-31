@@ -37,16 +37,28 @@
                         </thead>
                         <tbody>
                         <tr>
-                            <td>Mark</th>
-                            <td>1</td>
-                            <td>admin</td>
-                            <td>
-                            <a class="btn btn-primary" href="genredetail/" role="button">Edit</a>
-                            <a class="btn btn-danger" href="genredel/" role="button">Hapus</a>
-                            </td>
+                            @forelse ($user as $index => $value )
+                            <tr>
+                                <td>{{$user[$index]->name}}</td>
+                                <td>{{$user[$index]->nip}}</td>
+                                <td>{{$user[$index]->role}}</td>
+                                <td>
+                                    <a class="btn btn-primary" href="/editaccount/{{$user[$index]->id}}" role="button">Edit</a>
+                                    <form action="/delaccount/{{$user[$index]->id}}" method="post">
+                                        @csrf
+                                        {{method_field('DELETE')}}
+                                        <button type="submit" class="btn btn-danger" name="del" id="del">Hapus</button>
+                                    </form>   
+                                </td>
+                            </tr>
+                               
+                            @empty
+                                <td>Tidak ada user</td>
+                            @endforelse
+
                         </tr>
                         </tbody>
-                        {{-- {{$books->links()}} --}}
+                        {{$user->links()}}
                     </table>
                 </div>
             </div>
