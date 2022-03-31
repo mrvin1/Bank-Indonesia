@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
 
 class AccountManagementController extends Controller
 {
@@ -20,23 +23,74 @@ class AccountManagementController extends Controller
         return view('auth.register');
     }
     public function addAccountPost(Request $req){
-        $req->validate([
+        $users=$req->validate([
             'nip' => ['required'],
             'name' => ['required','string'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'email' => ['required', 'email', 'max:255', 'unique:users'],
             'password' => ['required'],
-            
+            'confirm' => ['required', 'same:password'],
+            'role'=>['required'],
         ]);
-        return redirect()->back();
+        $users=User::create([
+            'nip' => $users['nip'],
+            'role'=>$users['role'],
+            'name'=>$users['name'],
+            'email'=>$users['email'],
+            'password'=>$users['password'],
+        ]);
+        $users->save();
+        return redirect('accountmanager');
     }
 
-
-    public function editAccount($idx,Request $req)
+    public function editAccount($idx)
     {
-        return view('editAccount');
+        $user=User::find($idx);
+        return view('editAccount',['user'=>$user]);
     }
-    public function changePassword(Request $req)
+    public function editAccountSave($idx,Request $req){
+        $users=$req->validate([
+            'nip' => ['required'],
+            'nama' => ['required','string'],
+            'email' => ['required', 'email', 'max:255'],
+            'role'=>['required'],
+        ]);
+        $users=User::find($idx);
+        $users->nip = $req['nip'];
+        $users->name = $req['nama'];
+        $users->email = $req['email'];
+        $users->role = $req['role'];
+        $users->save();
+
+        return redirect('accountmanager');
+    }
+    public function resetPass($idx){
+        $users=User::find($idx);
+        $users->password = bcrypt('purwokerto111');
+        $users->save();
+        return redirect('accountmanager');
+    }
+
+    public function changePassword()
     {
         return view('changePassword');
     }
+    public function changePass(Request $request){
+        $dataa = Auth::user();
+        $new = $this->validate($request, [
+            'old'     => 'required',
+            'new'     => 'required|different:old',
+            'con' => 'required|same:new',
+        ]);
+        $data = $request->all();
+      
+        $user = User::find(auth()->user()->id);
+     
+        if(!Hash::check($data['old'], $user->password)){
+             return back()->with('error','wrong password');
+        }else{
+            $user = DB::table('users')->where('email', $dataa->email)->update(['password'=>bcrypt($new['new'])]);
+            return redirect('home'); 
+        }
+    }
+
 }

@@ -25,24 +25,32 @@
                 @csrf
                 <div class="form-group">
                     <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Nama Pengguna</label>
-                    <input type="text" name="nama" id="nama">
+                    <input type="text" name="nama" id="nama" value="{{$user->name}}">
+                </div>
+                <div class="form-group">
+                    <label for="password-confirm" class="col-md-4 col-form-label text-md-right">NIP</label>
+                    <input type="text" name="nip" id="nip" value="{{$user->nip}}">
+                </div>
+                <div class="form-group">
+                    <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Email</label>
+                    <input type="text" name="email" id="email" value="{{$user->email}}">
                 </div>
                 <div class="form-group">
                     <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Role</label>
                     <select name="role" id="role" required> 
-                        <option value="skrg">skrg</option>
+                        <option value="{{$user->role}}">{{$user->role}}</option>
                         <option value="admin">Admin</option>
                         <option value="user">User</option>
                     </select>
                 </div>
-                <button type="submit" class="btn btn-primary" style="display: block;margin-left: auto;margin-right: auto;width: 300px;">Simpan</button>
+                <button type="submit" class="btn btn-primary" style="display: block;margin-left: 30%;margin-right: auto;width: 200px;">Simpan</button>
             </form>
         </div>
-        <form action="" method="POST" style="display: flex;">
+        <form action="/resetpass/{{$user->id}}" method="POST" style="display: flex;">
+            @csrf
             <label for="password-confirm" class="col-md-4 col-form-label text-md-right" style="font-weight: bold">*Pass reset: purwokerto111</label>
             <div class="form-group row mb-0 " style="display: block;margin-left: auto;margin-right: auto;width: 40%;">
                 <div class="col-md-6 offset-md-4">
-                    <input id="password" type="password" class="form-control" name="password" hidden value="purwokerto111">
                     <button type="submit" class="btn btn-danger">
                         Reset Password
                     </button>
