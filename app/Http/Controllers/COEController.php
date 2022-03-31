@@ -8,6 +8,7 @@ use App\Models\Agenda;
 class COEController extends Controller
 {
    public function index(Request $req){
+    
        return view('listCOE');
    }  
    public function addCOE(){

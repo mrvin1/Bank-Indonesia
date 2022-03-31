@@ -1,4 +1,4 @@
-{{-- @extends('layouts.masterlay') --}}
+@extends('layouts.masterlay')
 @include('layouts.navigation')
 <head>
     <title>List COE</title>
