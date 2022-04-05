@@ -71,8 +71,8 @@ input[type=search]::-webkit-search-cancel-button {
                                          <td>{{$iku[$index]->realisasi}}</td>
                                          <td>{{$iku[$index]->keterangan}}</td>
                                          <td>
-                                            <a class="btn btn-primary" href="genredetail/" role="button">Edit</a>
-                                            <a class="btn btn-danger" href="genredel/" role="button">Hapus</a>
+                                            <a class="btn btn-primary" href="editiku/{{$iku[$index]->id}}" role="button">Edit</a>
+                                            <a class="btn btn-danger" href="deliku/{{$iku[$index]->id}}" role="button">Hapus</a>
                                         </td>
                                      @empty
                                          kosong
