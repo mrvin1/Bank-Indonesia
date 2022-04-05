@@ -22,43 +22,52 @@ hr {
     border: 0;
     border-top: 30px solid rgba(0, 0, 0, 0);
 }
-
 </style>
-<div class="content"style="background-image: url('{{Storage::url('assetsweb/meeting.jpg')}}'); background-size: 100%;  backdrop-filter: blur(20px); height: 100vh">
-    <div class="blur" style="background: rgba(184, 165, 83, 0.55); backdrop-filter: blur(2px);height: 100%;width: 100%;">
+<div class="content"style="background-image: url('{{Storage::url('assetsweb/meeting.jpg')}}'); background-size: 100%;  backdrop-filter: blur(20px); height: 130vh">
+    <div class="blur" style="background: rgba(170, 165, 144, 0.55); backdrop-filter: blur(2px);height: 100%;width: 100%;">
         <div class="cnt" style="padding-left: 4%; font-size: 25px; ">
                 <h1 style="text-align: center; padding-top: 2%; padding-bottom: 3%">Detil Bebarengan</h1>
-                <div class="form-group">
-                    <a class="btn btn-dark" href="" role="button" style="position: absolute;right: 80px;width: 200px;margin-bottom: 3%;">Edit Bebarengan</a>
-                </div>
-                <div class="form-group">
-                    <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Tanggal: </label>
-                    <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Lokasi: </label>
-                </div>
+                <tr>
+                    <a class="btn btn-dark" href="/editbebarengan/{{$bebarengan->id}}" role="button" style="display:flex; flex-direction: row; width: 150px; margin-left: auto">Edit Bebarengan</a>
+                </tr>                
+                <tr>
+                    <label for="password-confirm">Tanggal: </label>
+                    {{date('d-m-Y', strtotime($bebarengan->tanggalrapat));}}&emsp;
+                    <label for="password-confirm">Lokasi: </label>
+                    {{$bebarengan->lokasi}}
+                </tr>
                 <hr style="border-width: 2px; border-color: black">
-                <div class="form-group">
-                    <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Judul Rapat: </label>
-                </div>
+                <tr>
+                    <label for="password-confirm">Judul Rapat: </label>
+                    {{$bebarengan->judul}}
+                </tr>
                 <hr style="border-width: 2px; border-color: black">
-                <div class="form-group">
-                    <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Tujuan: </label>
-                </div>
+                <tr>
+                    <label for="password-confirm">Tujuan: </label>
+                    {{$bebarengan->tujuan}}
+                </tr>
                 <hr style="border-width: 2px; border-color: black">
-                <div class="form-group">
-                    <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Notulen: </label>
-                </div>
+                <tr>
+                    <label for="password-confirm">Notulen: </label>
+                    {{$bebarengan->notulen}}
+                </tr>
                 <hr style="border-width: 2px; border-color: black">
-                <div class="form-group">
-                    <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Kesimpulan: </label>
-                </div>
+                <tr>
+                    <label for="password-confirm">Kesimpulan: </label>
+                    {{$bebarengan->kesimpulan}}
+                </tr>
                 <hr style="border-width: 2px; border-color: black">
-                <div class="form-group">
-                    <label for="password-confirm" class="col-md-4 col-form-label text-md-right">File: </label>
-                </div>
+                <tr>
+                    <label for="password-confirm">File: </label>
+                    <a href={{asset('storage/bebarengan/'.$bebarengan->file1)}}>{{$bebarengan->file1}}</a> &emsp;
+                    <a href={{asset('storage/bebarengan/'.$bebarengan->file2)}}>{{$bebarengan->file2}}</a> &emsp;
+                    <a href={{asset('storage/bebarengan/'.$bebarengan->file3)}}>{{$bebarengan->file3}}</a> &emsp;
+                </tr>
                 <hr style="border-width: 2px; border-color: black">
-                <div class="form-group">
-                    <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Link Lampiran: </label>
-                </div>
+                <tr>
+                    <label for="password-confirm">Link Lampiran: </label>
+                    {{$bebarengan->linklampiran}}
+                </tr>
         </div>
         
     </div>   

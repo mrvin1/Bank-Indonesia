@@ -35,10 +35,7 @@ input[type=search]::-webkit-search-cancel-button {
                             <form class="form-inline" method="POST" action="/home" style="display: inline-block;">
                                 @csrf
                                 <p class="text-left">Periode: </p>
-                                    <select name="periode" id="periode">
-                                        <option value=""></option>
-                                        <option value="">Januari</option>
-                                    </select> 
+                                <input type="month" id="start" name="start" min="2021-03" value="">
                                     <p class="text-left">Cari berdasarkan indikator: </p>
                                     <input type="search" placeholder="Search..."/> 
                                     <p class="text-left">Jenis IKU: </p>
@@ -67,18 +64,24 @@ input[type=search]::-webkit-search-cancel-button {
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td>Mark</th>
-                                    <td>1</td>
-                                    <td>admin</td>
-                                    <td>
-                                    <a class="btn btn-primary" href="genredetail/" role="button">Edit</a>
-                                    <a class="btn btn-danger" href="genredel/" role="button">Hapus</a>
-                                    </td>
-                                </tr>
+            
+                                     @forelse ($iku as $index => $value)
+                                     <tr>
+                                         <td>{{$iku[$index]->indikatordesc}}</td>
+                                         <td>{{$iku[$index]->realisasi}}</td>
+                                         <td>{{$iku[$index]->keterangan}}</td>
+                                         <td>
+                                            <a class="btn btn-primary" href="genredetail/" role="button">Edit</a>
+                                            <a class="btn btn-danger" href="genredel/" role="button">Hapus</a>
+                                        </td>
+                                     @empty
+                                         kosong
+                                     @endforelse
+                                    </tr>
                                 </tbody>
-                                {{-- {{$books->links()}} --}}
+                                
                             </table>
+                            {{$iku->links()}}
                         </div>
                 </div>
             </div>

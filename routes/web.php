@@ -40,7 +40,10 @@ Route::get('/detailcoe/{idx}', [App\Http\Controllers\COEController::class, 'deta
 Route::get('/editcoe/{idx}', [App\Http\Controllers\COEController::class, 'editCOE'])->name('editCOE')->middleware('user');
 Route::get('/bebarengan', [App\Http\Controllers\BebarenganController::class, 'viewBebarengan'])->name('viewBebarengan')->middleware('user');
 Route::get('/addbebarengan', [App\Http\Controllers\BebarenganController::class, 'addBebarengan'])->name('addBebarengan')->middleware('user');
+Route::post('/addbebarengan', [App\Http\Controllers\BebarenganController::class, 'addBebarenganPost'])->name('addBebarenganPost')->middleware('user');
 Route::get('/detailbebarengan/{idx}', [App\Http\Controllers\BebarenganController::class, 'detailBebarengan'])->name('detailBebarengan')->middleware('user');
 Route::get('/editbebarengan/{idx}', [App\Http\Controllers\BebarenganController::class, 'editBebarengan'])->name('editBebarengan')->middleware('user');
+Route::post('/editbebarengan/{idx}', [App\Http\Controllers\BebarenganController::class, 'editBebarenganPost'])->name('editBebarenganPost')->middleware('user');
+Route::delete('/delbebarengan/{idx}', [App\Http\Controllers\BebarenganController::class, 'delBebarengan'])->name('delBebarengan')->middleware('user');
 Route::get('/menukpw', [App\Http\Controllers\ProfilKpwController::class, 'viewMenu'])->name('viewMenuKpw')->middleware('user');
 Route::get('/menuwil', [App\Http\Controllers\ProfilWilayahKerjaController::class, 'viewMenu'])->name('viewMenuWil')->middleware('user');

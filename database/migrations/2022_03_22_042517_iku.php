@@ -21,7 +21,7 @@ class Iku extends Migration
             $table->string('status');
             $table->longText('keterangan');
             $table->timestamps();
-            $table->dateTime('periode', $precision = 0);
+            $table->date('periode', $precision = 0);
         });
     }
 

@@ -13,4 +13,7 @@ class IKU extends Model
     public function users(){
         return $this->hasMany(User::class);
     }
+    public function indikatorIKU(){
+        return $this->belongsto(indikatorIKU::class);
+    }
 }

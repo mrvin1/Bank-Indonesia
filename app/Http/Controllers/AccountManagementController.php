@@ -24,7 +24,7 @@ class AccountManagementController extends Controller
     }
     public function addAccountPost(Request $req){
         $users=$req->validate([
-            'nip' => ['required'],
+            'nip' => ['required','size:5'],
             'name' => ['required','string'],
             'email' => ['required', 'email', 'max:255', 'unique:users'],
             'password' => ['required'],

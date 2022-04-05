@@ -26,7 +26,7 @@ class AgendaSeeder extends Seeder
            'file2'=>'2.jpg',
            'file3'=>'3.jpg',
            'linklampiran'=>'https://www.google.com',
-            'deadline' => $dt->setDateTime(2024, 3, 25, 22, 32, 5),
+            'deadline' => $dt->setDate(2024, 3, 25),
         ]);
         $dummy=Faker::create('en_US');
         Agenda::create([
@@ -37,7 +37,7 @@ class AgendaSeeder extends Seeder
             'file2'=>'2.pdf',
             'file3'=>'3.pdf',
             'linklampiran'=>'https://www.bing.com',
-             'deadline' => $dt->setDateTime(2022, 3, 25, 22, 32, 5),
+             'deadline' => $dt->setDate(2022, 3, 25),
          ]);
     }
 }

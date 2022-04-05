@@ -37,12 +37,16 @@
                         <tbody>
                         <tr>
                             @forelse ($bebarengan as $index => $value )
-                            <tr>
-                                <td>{{$bebarengan[$index]->tanggalrapat}}</td>
-                                <td>{{$bebarengan[$index]->judul}}</td>
-                                <td>
-                                    <a class="btn btn-primary" href="genredetail/" role="button">Edit</a>
-                                    <a class="btn btn-danger" href="genredel/" role="button">Hapus</a>
+                            <tr>   
+                                <td>{{date('d-m-Y', strtotime($bebarengan[$index]->tanggalrapat));}}</td>
+                                <td><a href="detailbebarengan/{{$bebarengan[$index]->id}}" style="color: white">{{$bebarengan[$index]->judul}}</a></td>
+                                <td style="display: flex; padding: 1%; gap: 2%">
+                                    <a class="btn btn-primary" href="editbebarengan/{{$bebarengan[$index]->id}}" role="button" style="height: 40px;">Edit</a>
+                                        <form action="/delbebarengan/{{$bebarengan[$index]->id}}" method="post">
+                                            @csrf
+                                            {{method_field('DELETE')}}
+                                            <button type="submit" class="btn btn-danger" name="del" id="del">Hapus</button>
+                                        </form>   
                                 </td>
                             </tr>
                             @empty

@@ -21,7 +21,7 @@
     <div class="blur" style="background: rgba(184, 165, 83, 0.55); backdrop-filter: blur(2px);height: 100%;width: 100%;">
         <div class="cnt" style="padding-left: 4% ">
                 <h1 style="text-align: center; padding-top: 2%; padding-bottom: 2%">Tambah Bebarengan</h1>
-            <form action="" method="POST" style="padding: 0 20%">
+            <form action="/addbebarengan" method="POST" style="padding: 0 20%"  enctype="multipart/form-data">
                 @csrf
                 <div class="form-row">
                     <div class="form-group col-md-6">
@@ -35,20 +35,20 @@
                 </div>               
                 <div class="form-group">
                     <label for="password-confirm">Judul Rapat: </label>
-                    <input type="text" name="title" id="tile">
+                    <input type="text" name="title" id="title">
                 </div>
                 <div class="form-group">
                     <label for="password-confirm">Tujuan: </label>
-                    <textarea class="form-control" rows="3" name="ket" id="ket"></textarea>
+                    <textarea class="form-control" rows="3" name="for" id="for"></textarea>
                 </div>
                 <div class="form-group">
                     <label for="password-confirm">Notulen: </label>
-                    <textarea class="form-control" rows="3" name="ket" id="ket"></textarea>
+                    <textarea class="form-control" rows="3" name="not" id="not"></textarea>
                 </div>
                 
                 <div class="form-group">
                     <label for="password-confirm">Kesimpulan rapat: </label>
-                    <textarea class="form-control" rows="3" name="ket" id="ket"></textarea>
+                    <textarea class="form-control" rows="3" name="con" id="con"></textarea>
                 </div>
                 <div class="form-row">
                     <div class="form-group">

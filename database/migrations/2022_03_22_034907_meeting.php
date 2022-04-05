@@ -25,7 +25,7 @@ class Meeting extends Migration
             $table->string('file2');
             $table->string('file3');
             $table->timestamps();
-            $table->dateTime('tanggalrapat', $precision = 0);
+            $table->date('tanggalrapat', $precision = 0);
         });
     }
 

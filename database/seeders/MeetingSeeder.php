@@ -29,7 +29,7 @@ class MeetingSeeder extends Seeder
                 'file2'=>'2.jpg',
                 'file3'=>'3.jpg',
                 'linklampiran'=>'https://www.google.com',
-                'tanggalrapat' => $dt->setDateTime(2022, 3, 25, 22, 32, 5),
+                'tanggalrapat' => $dt->setDate(2022, 3, 25, 22),
             ]);
         }
     }

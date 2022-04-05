@@ -42,8 +42,8 @@
                                 <td>{{$user[$index]->name}}</td>
                                 <td>{{$user[$index]->nip}}</td>
                                 <td>{{$user[$index]->role}}</td>
-                                <td>
-                                    <a class="btn btn-primary" href="/editaccount/{{$user[$index]->id}}" role="button">Edit</a>
+                                <td style="display: flex; padding: 1%; gap: 2%">
+                                    <a class="btn btn-primary" href="/editaccount/{{$user[$index]->id}}" role="button" style="height: 40px">Edit</a>
                                     <form action="/delaccount/{{$user[$index]->id}}" method="post">
                                         @csrf
                                         {{method_field('DELETE')}}
