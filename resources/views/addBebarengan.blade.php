@@ -26,29 +26,29 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                       <label for="inputEmail4">Tanggal: </label>
-                        <input type="date" name="tanggal" id="tanggal">
+                        <input type="date" name="tanggal" id="tanggal" required>
                     </div>
                     <div class="form-group col-md-6">
                       <label for="inputPassword4">Lokasi rapat: </label>
-                      <input type="text" name="loc" id="loc">
+                      <input type="text" name="loc" id="loc" required>
                     </div>
                 </div>               
                 <div class="form-group">
                     <label for="password-confirm">Judul Rapat: </label>
-                    <input type="text" name="title" id="title">
+                    <input type="text" name="title" id="title" required>
                 </div>
                 <div class="form-group">
                     <label for="password-confirm">Tujuan: </label>
-                    <textarea class="form-control" rows="3" name="for" id="for"></textarea>
+                    <textarea class="form-control" rows="3" name="for" id="for" required></textarea>
                 </div>
                 <div class="form-group">
                     <label for="password-confirm">Notulen: </label>
-                    <textarea class="form-control" rows="3" name="not" id="not"></textarea>
+                    <textarea class="form-control" rows="3" name="not" id="not" required></textarea>
                 </div>
                 
                 <div class="form-group">
                     <label for="password-confirm">Kesimpulan rapat: </label>
-                    <textarea class="form-control" rows="3" name="con" id="con"></textarea>
+                    <textarea class="form-control" rows="3" name="con" id="con" required></textarea>
                 </div>
                 <div class="form-row">
                     <div class="form-group">

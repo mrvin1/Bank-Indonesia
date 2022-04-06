@@ -16,7 +16,7 @@
                                     <div class="form-group row">
                                         <label for="name" class="col-md-4 col-form-label text-md-right">NIP</label>
                                         <div class="col-md-6">
-                                            <input id="nip" type="text" class="form-control @error('name') is-invalid @enderror" name="nip" required autofocus>
+                                            <input id="nip" type="text" class="form-control @error('nip') is-invalid @enderror" name="nip" required autofocus>
                                         </div>
                                     </div>
 

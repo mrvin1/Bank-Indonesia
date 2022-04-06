@@ -25,15 +25,15 @@
                 @csrf
                 <div class="form-group">
                     <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Nama Pengguna</label>
-                    <input type="text" name="nama" id="nama" value="{{$user->name}}">
+                    <input type="text" name="nama" id="nama" value="{{$user->name}}" required>
                 </div>
                 <div class="form-group">
                     <label for="password-confirm" class="col-md-4 col-form-label text-md-right">NIP</label>
-                    <input type="text" name="nip" id="nip" value="{{$user->nip}}">
+                    <input type="text" name="nip" id="nip" value="{{$user->nip}}" required>
                 </div>
                 <div class="form-group">
                     <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Email</label>
-                    <input type="text" name="email" id="email" value="{{$user->email}}">
+                    <input type="text" name="email" id="email" value="{{$user->email}}" required>
                 </div>
                 <div class="form-group">
                     <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Role</label>

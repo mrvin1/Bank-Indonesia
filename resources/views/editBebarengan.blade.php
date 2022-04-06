@@ -26,29 +26,29 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                       <label for="inputEmail4">Tanggal: </label>
-                        <input type="date" name="tanggal" id="tanggal" value="{{$bebarengan->tanggalrapat}}">
+                        <input type="date" name="tanggal" id="tanggal" value="{{$bebarengan->tanggalrapat}}" required>
                     </div>
                     <div class="form-group col-md-6">
                       <label for="inputPassword4">Lokasi rapat: </label>
-                      <input type="text" name="loc" id="loc" value="{{$bebarengan->lokasi}}">
+                      <input type="text" name="loc" id="loc" value="{{$bebarengan->lokasi}}" required>
                     </div>
                 </div>               
                 <div class="form-group">
                     <label for="password-confirm">Judul Rapat: </label>
-                    <input type="text" name="title" id="tile" value="{{$bebarengan->judul}}">
+                    <input type="text" name="title" id="tile" value="{{$bebarengan->judul}}" required>
                 </div>
                 <div class="form-group">
                     <label for="password-confirm">Tujuan: </label>
-                    <textarea class="form-control" rows="3" name="for" id="for">{{$bebarengan->tujuan}}</textarea>
+                    <textarea class="form-control" rows="3" name="for" id="for" required>{{$bebarengan->tujuan}}</textarea>
                 </div>
                 <div class="form-group">
                     <label for="password-confirm">Notulen: </label>
-                    <textarea class="form-control" rows="3" name="not" id="not">{{$bebarengan->notulen}}</textarea>
+                    <textarea class="form-control" rows="3" name="not" id="not" required>{{$bebarengan->notulen}}</textarea>
                 </div>
                 
                 <div class="form-group">
                     <label for="password-confirm">Kesimpulan rapat: </label>
-                    <textarea class="form-control" rows="3" name="con" id="con">{{$bebarengan->kesimpulan}}</textarea>
+                    <textarea class="form-control" rows="3" name="con" id="con" required>{{$bebarengan->kesimpulan}}</textarea>
                 </div>
                 <div class="form-row">
                     <div class="form-group">

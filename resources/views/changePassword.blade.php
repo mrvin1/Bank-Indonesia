@@ -24,15 +24,15 @@
             @csrf
             <div class="form-group">
                 <label for="password-confirm">Kata Sandi Lama: </label>
-                <input type="password" name="old" id="old" style="width: 600px">
+                <input type="password" name="old" id="old" style="width: 600px" required>
             </div>
             <div class="form-group">
                 <label for="password-confirm">Kata Sandi Baru: </label>
-                <input type="password" name="new" id="new" style="width: 600px">
+                <input type="password" name="new" id="new" style="width: 600px" required>
             </div>
             <div class="form-group">
                 <label for="password-confirm">Konfirmasi Kata Sandi: </label>
-                <input type="password" name="con" id="con" style="width: 580px">
+                <input type="password" name="con" id="con" style="width: 580px" required>
             </div>
             <div class="form-group" style="padding-top:3% ">
                     <button type="submit" class="btn btn-success" style="display: block;margin-left: auto;margin-right: auto;width: 40%;">

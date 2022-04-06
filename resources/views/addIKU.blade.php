@@ -25,24 +25,22 @@
                 @csrf
                 <div class="form-group">
                     <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Periode</label>
-                    <input type="date" name="periode" id="periode">
+                    <input type="month" name="periode" id="periode" required>
                 </div>
                 <div class="form-group">
                     <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Jenis IKU</label>
                     <select name="jenisiku" id="jenisiku">
                         <option value=""></option>
-                        <option value="">IKU Implementasi</option>
-                        <option value="">IKU Rekomendasi</option>
-                        <option value="">IKU Asesmen</option>
-                        <option value="">IKU Data/ Informasi</option>
-                        <option value="">IKU Manajemen</option>
+                        <option value="1">IKU Implementasi</option>
+                        <option value="2">IKU Rekomendasi</option>
+                        <option value="3">IKU Asesmen</option>
+                        <option value="4">IKU Data/ Informasi</option>
+                        <option value="5">IKU Manajemen</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Indikator</label>
-                    <select name="indikator" id="indikator">
-                        <option value=""></option>
-                    </select>
+                    <select name="indikator" id="indikator" style="max-width: 500px"> </select>
                 </div>
                 <div class="form-group">
                     <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Realisasi</label>
@@ -67,4 +65,37 @@
         
     </div>   
 </div>
+
 @extends('layouts.footer')
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function() {
+            $('#jenisiku').on('change', function() {
+               var jenisiku = $(this).val();
+               if(jenisiku) {
+                   $.ajax({
+                       url: '/getindikator/'+jenisiku,
+                       type: "GET",
+                       data : {"_token":"{{ csrf_token() }}"},
+                       dataType: "json",
+                       success:function(data)
+                       {
+                         if(data){
+                            $('#indikator').empty();
+                            $('#indikator').append('<option hidden>Choose Indikator</option>'); 
+                            $.each(data, function(key, indikatordesc){
+                                $('select[name="indikator"]').append('<option value="'+ key +'">' + indikatordesc.indikatordesc+ '</option>');
+                            });
+                        }else{
+                            $('#indikator').empty();
+                        }
+                     }
+                   });
+               }else{
+                 $('#indikator').empty();
+               }
+            });
+            });
+</script>

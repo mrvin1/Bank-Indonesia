@@ -14,8 +14,10 @@
              @endif
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-              <a class="dropdown-item" type="button" href="{{route('accountManager')}}">Manajemen Akun</a>
-              <div class="dropdown-divider"></div>
+              @if (auth()->user()->role == 'admin')
+                <a class="dropdown-item" type="button" href="{{route('accountManager')}}">Manajemen Akun</a>
+                <div class="dropdown-divider"></div>
+              @endif
               <a class="dropdown-item" type="button" href="{{route('changePassword')}}">Ganti Password</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="{{route('logout')}}" type="button">Keluar</a>

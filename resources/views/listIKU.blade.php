@@ -32,20 +32,20 @@ input[type=search]::-webkit-search-cancel-button {
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-4">
-                            <form class="form-inline" method="POST" action="/home" style="display: inline-block;">
+                            <form class="form-inline" method="POST" action={{route('listIKU')}} style="display: inline-block;">
                                 @csrf
                                 <p class="text-left">Periode: </p>
-                                <input type="month" id="start" name="start" min="2021-03" value="">
+                                <input type="month" id="tgl" name="tgl" min="2021-03" value="2022-02">
                                     <p class="text-left">Cari berdasarkan indikator: </p>
-                                    <input type="search" placeholder="Search..."/> 
+                                    <input type="search" placeholder="Search..." name="cari" id="cari"> 
                                     <p class="text-left">Jenis IKU: </p>
                                     <select name="jenisiku" id="jenisiku">
                                         <option value=""></option>
-                                        <option value="">IKU Implementasi</option>
-                                        <option value="">IKU Rekomendasi</option>
-                                        <option value="">IKU Asesmen</option>
-                                        <option value="">IKU Data/ Informasi</option>
-                                        <option value="">IKU Manajemen</option>
+                                        <option value="1">IKU Implementasi</option>
+                                        <option value="2">IKU Rekomendasi</option>
+                                        <option value="3">IKU Asesmen</option>
+                                        <option value="4">IKU Data/ Informasi</option>
+                                        <option value="5">IKU Manajemen</option>
                                     </select>
                                     <br>
                                     <button type="submit" class="btn btn-primary" style="margin-top: 5%">Implementasikan</button>  
@@ -64,7 +64,6 @@ input[type=search]::-webkit-search-cancel-button {
                                 </tr>
                                 </thead>
                                 <tbody>
-            
                                      @forelse ($iku as $index => $value)
                                      <tr>
                                          <td>{{$iku[$index]->indikatordesc}}</td>
@@ -75,13 +74,13 @@ input[type=search]::-webkit-search-cancel-button {
                                             <a class="btn btn-danger" href="deliku/{{$iku[$index]->id}}" role="button">Hapus</a>
                                         </td>
                                      @empty
-                                         kosong
+                                         <td>kosong</td>
                                      @endforelse
                                     </tr>
                                 </tbody>
                                 
                             </table>
-                            {{$iku->links()}}
+                            {{$iku->withQueryString()->links()}}
                         </div>
                 </div>
             </div>

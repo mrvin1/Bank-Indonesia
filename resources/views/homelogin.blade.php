@@ -37,7 +37,7 @@ a{
 
 <div class="content" style="background-image: url('{{Storage::url('assetsweb/bipwt.jpg')}}'); background-size: 100%; backdrop-filter: blur(20px);height: 110%; width: 100%;">
     <div class="blur" style="background: rgba(237, 205, 187, 0.55); backdrop-filter: blur(2px);height: 100%;width: 100%;">
-        <h1 style="border-color: white; display: flex; justify-content: center; padding-top: 2%;padding-bottom: 2%">Selamat Datang Pengguna 1</h1>
+        <h1 style="border-color: white; display: flex; justify-content: center; padding-top: 2%;padding-bottom: 2%">Selamat Datang {{auth()->user()->name}}</h1>
         <div class="box">
             <div class="container">
                 <div class="card-deck">
