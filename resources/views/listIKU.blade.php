@@ -35,7 +35,7 @@ input[type=search]::-webkit-search-cancel-button {
                             <form class="form-inline" method="POST" action={{route('listIKU')}} style="display: inline-block;">
                                 @csrf
                                 <p class="text-left">Periode: </p>
-                                <input type="month" id="tgl" name="tgl" min="2021-03" value="2022-02">
+                                <input type="month" id="tgl" name="tgl" min="2021-03" required>
                                     <p class="text-left">Cari berdasarkan indikator: </p>
                                     <input type="search" placeholder="Search..." name="cari" id="cari"> 
                                     <p class="text-left">Jenis IKU: </p>
@@ -66,12 +66,16 @@ input[type=search]::-webkit-search-cancel-button {
                                 <tbody>
                                      @forelse ($iku as $index => $value)
                                      <tr>
-                                         <td>{{$iku[$index]->indikatordesc}}</td>
+                                         <td><a href="detailiku/{{$iku[$index]->ikuid}}" style="text-decoration: none; color: white">{{$iku[$index]->indikatordesc}}</a></td>
                                          <td>{{$iku[$index]->realisasi}}</td>
-                                         <td>{{$iku[$index]->keterangan}}</td>
+                                         <td><a href="detailiku/{{$iku[$index]->ikuid}}" style="text-decoration: none; color: white">{{$iku[$index]->keterangan}}</a></td>
                                          <td>
-                                            <a class="btn btn-primary" href="editiku/{{$iku[$index]->id}}" role="button">Edit</a>
-                                            <a class="btn btn-danger" href="deliku/{{$iku[$index]->id}}" role="button">Hapus</a>
+                                            <a class="btn btn-primary" href="editiku/{{$iku[$index]->ikuid}}" role="button">Edit</a>
+                                            <form action="/deliku/{{$iku[$index]->ikuid}}" method="post">
+                                                @csrf
+                                                {{method_field('DELETE')}}
+                                                <button type="submit" class="btn btn-danger" name="del" id="del">Hapus</button>
+                                            </form>
                                         </td>
                                      @empty
                                          <td>kosong</td>

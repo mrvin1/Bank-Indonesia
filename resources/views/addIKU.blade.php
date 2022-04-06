@@ -25,11 +25,11 @@
                 @csrf
                 <div class="form-group">
                     <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Periode</label>
-                    <input type="month" name="periode" id="periode" required>
+                    <input type="date" name="periode" id="periode" required>
                 </div>
                 <div class="form-group">
                     <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Jenis IKU</label>
-                    <select name="jenisiku" id="jenisiku">
+                    <select name="jenisiku" id="jenisiku" required>
                         <option value=""></option>
                         <option value="1">IKU Implementasi</option>
                         <option value="2">IKU Rekomendasi</option>
@@ -40,22 +40,22 @@
                 </div>
                 <div class="form-group">
                     <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Indikator</label>
-                    <select name="indikator" id="indikator" style="max-width: 500px"> </select>
+                    <select name="indikator" id="indikator" style="max-width: 500px" required> </select>
                 </div>
                 <div class="form-group">
                     <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Realisasi</label>
-                    <input type="text" name="realisasi" id="realisasi">
+                    <input type="text" name="realisasi" id="realisasi" required>
                 </div>
                 <div class="form-group">
                     <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Status</label>
-                    <input type="radio" name="track" id="track" value="On-Track">
+                    <input type="radio" name="track" id="track" value="On Track" required>
                     <label for="ontrack">   On-Track</label>
-                    <input type="radio" name="track" id="track" value="Off-Track">
+                    <input type="radio" name="track" id="track" value="Off Track" required>
                     <label for="offtrack">  Off-Track</label>
                 </div>
                 <div class="form-group">
                     <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Keterangan</label>
-                    <textarea name="ket" id="ket" cols="45" rows="5"></textarea>
+                    <textarea name="ket" id="ket" cols="45" rows="5" required></textarea>
                 </div>
                 <div class="form-group"  style="display: block; margin-left: 50%;margin-right: auto;width: 40%;">
                     <button type="submit" class="btn btn-success">Simpan</button>
@@ -78,7 +78,6 @@
                    $.ajax({
                        url: '/getindikator/'+jenisiku,
                        type: "GET",
-                       data : {"_token":"{{ csrf_token() }}"},
                        dataType: "json",
                        success:function(data)
                        {
@@ -86,7 +85,7 @@
                             $('#indikator').empty();
                             $('#indikator').append('<option hidden>Choose Indikator</option>'); 
                             $.each(data, function(key, indikatordesc){
-                                $('select[name="indikator"]').append('<option value="'+ key +'">' + indikatordesc.indikatordesc+ '</option>');
+                                $('select[name="indikator"]').append('<option value="'+indikatordesc.id +'">' + indikatordesc.indikatordesc+ '</option>');
                             });
                         }else{
                             $('#indikator').empty();

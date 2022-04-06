@@ -36,6 +36,7 @@ Route::get('/addiku', [App\Http\Controllers\IKUController::class, 'addIKU'])->na
 Route::post('/addiku', [App\Http\Controllers\IKUController::class, 'addIKUPOST'])->name('addIKUPOST')->middleware('user');
 Route::get('/detailiku/{idx}', [App\Http\Controllers\IKUController::class, 'detailIKU'])->name('detailIKU')->middleware('user');
 Route::get('/editiku/{idx}', [App\Http\Controllers\IKUController::class, 'editIKU'])->name('editIKU')->middleware('user');
+Route::delete('/deliku/{idx}', [App\Http\Controllers\IKUController::class, 'delIKU'])->name('delIKU')->middleware('user');
 Route::get('/coe', [App\Http\Controllers\COEController::class, 'index'])->name('viewCOE')->middleware('user');
 Route::get('/addcoe', [App\Http\Controllers\COEController::class, 'addCOE'])->name('addCOE')->middleware('user');
 Route::get('/detailcoe/{idx}', [App\Http\Controllers\COEController::class, 'detailCOE'])->name('detailCOE')->middleware('user');

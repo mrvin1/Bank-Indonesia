@@ -25,7 +25,7 @@
                 @csrf
                 <div class="form-group">
                     <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Periode</label>
-                    <input type="date" name="periode" id="periode">
+                    <input type="date" name="periode" id="periode" value="{{$iku->periode}}">
                 </div>
                 <div class="form-group">
                     <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Jenis IKU</label>
@@ -46,18 +46,18 @@
                 </div>
                 <div class="form-group">
                     <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Realisasi</label>
-                    <input type="text" name="realisasi" id="realisasi">
+                    <input type="text" name="realisasi" id="realisasi" value="{{$iku->realisasi}}">
                 </div>
                 <div class="form-group">
                     <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Status</label>
-                    <input type="radio" name="track" id="track" value="On-Track">
-                    <label for="ontrack">   On-Track</label>
-                    <input type="radio" name="track" id="track" value="Off-Track">
-                    <label for="offtrack">  Off-Track</label>
+                    <input type="radio" name="track" id="track" value="On Track" @if ($iku->status=="On Track") checked="checked"@endif>
+                    <label for="Ontrack">   On-Track</label>
+                    <input type="radio" name="track" id="track" value="Off Track" @if ($iku->status=="Off Track") checked="checked"@endif>
+                    <label for="Offtrack">  Off-Track</label>
                 </div>
                 <div class="form-group">
                     <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Keterangan</label>
-                    <textarea name="ket" id="ket" cols="45" rows="5"></textarea>
+                    <textarea name="ket" id="ket" cols="45" rows="5">{{$iku->keterangan}}</textarea>
                 </div>
                 <div class="form-group"  style="display: block; margin-left: 50%;margin-right: auto;width: 40%;">
                     <button type="submit" class="btn btn-success">Simpan</button>

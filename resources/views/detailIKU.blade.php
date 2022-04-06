@@ -18,32 +18,43 @@
 }
 </style>
 <div class="content"style="background-image: url('{{Storage::url('assetsweb/mountain.jpg')}}'); background-size: 100%;  backdrop-filter: blur(20px); height: 100vh">
-    <div class="blur" style="background: rgba(240, 145, 145, 0.55); backdrop-filter: blur(2px);height: 100%;width: 100%;">
+    <div class="blur" style="background: rgba(235, 201, 201, 0.55); backdrop-filter: blur(2px);height: 100%;width: 100%;">
         <div class="cnt" style="padding-left: 4%; font-size: 25px; ">
-                <h1 style="text-align: center; padding-top: 2%; padding-bottom: 3%">Tampil IKU</h1>
-                <div class="form-group">
-                    <a class="btn btn-dark" href="" role="button" style="position: absolute;right: 80px;width: 100px;margin-bottom: 3%;">Edit IKU</a>
-                </div>
-                    <div class="form-group">
-                        <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Periode: </label>
-                    </div> 
-                    <div class="form-group">
-                        <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Jenis IKU: </label>
-                    </div>
-                    <div class="form-group">
-                        <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Indikator: </label>
-                    </div>
-                    <div class="form-group">
-                        <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Realisasi: </label>
-                    </div>
-                    <div class="form-group">
-                        <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Status: </label>
-                    </div>
-                    <div class="form-group">
-                        <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Keterangan: </label>
-                    </div>
-                
-                
+                <h1 style="text-align: center; padding-top: 2%; padding-bottom: 3%">Rincian IKU</h1>
+
+                <tr>
+                    <a class="btn btn-dark" href="/editiku/{{$iku->ikuid}}" role="button" style="display:flex; flex-direction: row; width: 150px; margin-left: auto">Edit IKU</a>
+                </tr>                
+                <tr>
+                    <td>
+                        <label for="password-confirm">Periode: </label>
+                        {{date('d-m-Y', strtotime($iku->periode));}}&emsp;
+                    </td>
+                    <td>
+                        <label for="password-confirm">Jenis IKU: </label>
+                        {{$jenis->jenisdesc}}
+                    </td>
+                </tr>
+                <hr style="border-width: 2px; border-color: black">
+                <tr>
+                    <label for="password-confirm">Indikator: </label>
+                    {{$jenis->indikatordesc}}
+                </tr>
+                <hr style="border-width: 2px; border-color: black">
+                <tr>
+                    <label for="password-confirm">Realisasi: </label>
+                    {{$iku->realisasi}}
+                </tr>
+                <hr style="border-width: 2px; border-color: black">
+                <tr>
+                    <label for="password-confirm">Status: </label>
+                    {{$iku->status}}
+                </tr>
+                <hr style="border-width: 2px; border-color: black">
+                <tr>
+                    <label for="password-confirm">Keterangan: </label>
+                    {{$iku->keterangan}}
+                </tr>                
         </div>
         
     </div>   

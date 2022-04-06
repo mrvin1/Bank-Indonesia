@@ -14,7 +14,7 @@ class Iku extends Migration
     public function up()
     {
         Schema::create('ikus', function (Blueprint $table) {
-            $table->id();
+            $table->id('ikuid');
             $table->unsignedBigInteger('indikator');
             $table->foreign('indikator')->references('id')->on('indikatoriku');
             $table->longText('realisasi');

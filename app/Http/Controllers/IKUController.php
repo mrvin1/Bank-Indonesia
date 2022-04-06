@@ -59,13 +59,38 @@ class IKUController extends Controller
         return view('addIKU',['indikator'=>$indikator]);
     }
     public function addIKUPost(Request $req){
-        
-        return redirect('listIKU');
+        $iku=$req->validate([
+            'periode' => ['required'],
+            'jenisiku' => ['required'],
+            'indikator' => ['required'],
+            'realisasi' => ['required'],
+            'track' => ['required'],
+            'ket'=>['required'],
+        ]);
+        $iku=IKU::create([
+            'periode' => $iku['periode'],
+            'indikator'=>$iku['indikator'],
+            'realisasi'=>$iku['realisasi'],
+            'status'=>$iku['track'],
+            'keterangan'=>$iku['ket'],
+        ]);
+        $iku->save();
+        return redirect('listiku');
     }
-    public function detailIKU(){
-        return view('detailIKU');
+    public function delIKU($idx){
+        $iku=IKU::where('ikuid','=',$idx);
+        $iku->delete();
+        return redirect()->back();
     }
-    public function editIKU(){
-        return view('editIKU');
+    public function detailIKU($idx){
+        $iku=IKU::where('ikuid','=',$idx)->first();
+        $jenis=IKU::join('indikatoriku','indikatoriku.id','=','ikus.indikator')->join('jenisiku','jenisiku.id','=','indikatoriku.jenisiku')->where('ikuid','=',$idx)->first();  
+        return view('detailIKU',['iku'=>$iku, 'jenis'=>$jenis]);
+    }
+    //belum selesai
+    public function editIKU($idx){
+        $iku=IKU::where('ikuid','=',$idx)->first();
+        $jenis=IKU::join('indikatoriku','indikatoriku.id','=','ikus.indikator')->join('jenisiku','jenisiku.id','=','indikatoriku.jenisiku')->where('ikuid','=',$idx)->first();  
+        return view('editIKU',['iku'=>$iku, 'jenis'=>$jenis]);
     }
 }
