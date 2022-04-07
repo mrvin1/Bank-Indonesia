@@ -16,15 +16,17 @@ class Agendas extends Migration
         Schema::create('agendas', function (Blueprint $table) {
             $table->id();
             $table->string('email');
-            $table->longText('aktivitas');
+            $table->string('title');
             $table->longText('keterangan');
             $table->longText('linklampiran');
             $table->string('file1');
             $table->string('file2');
             $table->string('file3');
             $table->timestamps();
-            $table->dateTime('deadline', $precision = 0);
+            $table->dateTime('start');
+            $table->dateTime('end');
         });
+
 
     }
 

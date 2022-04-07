@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\IKU;
 use App\Models\indikatorIKU;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
 
 class IKUController extends Controller
 {
@@ -87,10 +88,22 @@ class IKUController extends Controller
         $jenis=IKU::join('indikatoriku','indikatoriku.id','=','ikus.indikator')->join('jenisiku','jenisiku.id','=','indikatoriku.jenisiku')->where('ikuid','=',$idx)->first();  
         return view('detailIKU',['iku'=>$iku, 'jenis'=>$jenis]);
     }
-    //belum selesai
     public function editIKU($idx){
         $iku=IKU::where('ikuid','=',$idx)->first();
         $jenis=IKU::join('indikatoriku','indikatoriku.id','=','ikus.indikator')->join('jenisiku','jenisiku.id','=','indikatoriku.jenisiku')->where('ikuid','=',$idx)->first();  
         return view('editIKU',['iku'=>$iku, 'jenis'=>$jenis]);
+    }
+    public function editIKUPost($idx, Request $req){
+        $iku=$req->validate([
+            'periode' => ['required'],
+            'jenisiku' => ['required'],
+            'indikator' => ['required'],
+            'realisasi' => ['required'],
+            'track' => ['required'],
+            'ket'=>['required'],
+        ]);
+        $ikuu = DB::table('ikus')->where('ikuid', $idx)->update(['periode'=>$iku['periode'],'indikator'=>$iku['indikator'],'realisasi'=>$iku['realisasi'],
+        'status'=>$iku['track'], 'keterangan'=>$iku['ket']]);
+        return redirect('listiku');
     }
 }

@@ -48,17 +48,17 @@ class AccountManagementController extends Controller
         return view('editAccount',['user'=>$user]);
     }
     public function editAccountSave($idx,Request $req){
-        $users=$req->validate([
+        $userss=$req->validate([
             'nip' => ['required'],
             'nama' => ['required','string'],
             'email' => ['required', 'email', 'max:255'],
             'role'=>['required'],
         ]);
         $users=User::find($idx);
-        $users->nip = $req['nip'];
-        $users->name = $req['nama'];
-        $users->email = $req['email'];
-        $users->role = $req['role'];
+        $users->nip = $userss['nip'];
+        $users->name = $userss['nama'];
+        $users->email = $userss['email'];
+        $users->role = $userss['role'];
         $users->save();
 
         return redirect('accountmanager');

@@ -36,11 +36,14 @@ Route::get('/addiku', [App\Http\Controllers\IKUController::class, 'addIKU'])->na
 Route::post('/addiku', [App\Http\Controllers\IKUController::class, 'addIKUPOST'])->name('addIKUPOST')->middleware('user');
 Route::get('/detailiku/{idx}', [App\Http\Controllers\IKUController::class, 'detailIKU'])->name('detailIKU')->middleware('user');
 Route::get('/editiku/{idx}', [App\Http\Controllers\IKUController::class, 'editIKU'])->name('editIKU')->middleware('user');
+Route::post('/editiku/{idx}', [App\Http\Controllers\IKUController::class, 'editIKUPost'])->name('editIKUPost')->middleware('user');
 Route::delete('/deliku/{idx}', [App\Http\Controllers\IKUController::class, 'delIKU'])->name('delIKU')->middleware('user');
 Route::get('/coe', [App\Http\Controllers\COEController::class, 'index'])->name('viewCOE')->middleware('user');
 Route::get('/addcoe', [App\Http\Controllers\COEController::class, 'addCOE'])->name('addCOE')->middleware('user');
+Route::post('/addcoe', [App\Http\Controllers\COEController::class, 'addCOEPost'])->name('addCOEPost')->middleware('user');
 Route::get('/detailcoe/{idx}', [App\Http\Controllers\COEController::class, 'detailCOE'])->name('detailCOE')->middleware('user');
 Route::get('/editcoe/{idx}', [App\Http\Controllers\COEController::class, 'editCOE'])->name('editCOE')->middleware('user');
+Route::post('/editcoe/{idx}', [App\Http\Controllers\COEController::class, 'editCOEPost'])->name('editCOEPost')->middleware('user');
 Route::get('/bebarengan', [App\Http\Controllers\BebarenganController::class, 'viewBebarengan'])->name('viewBebarengan')->middleware('user');
 Route::get('/addbebarengan', [App\Http\Controllers\BebarenganController::class, 'addBebarengan'])->name('addBebarengan')->middleware('user');
 Route::post('/addbebarengan', [App\Http\Controllers\BebarenganController::class, 'addBebarenganPost'])->name('addBebarenganPost')->middleware('user');
@@ -55,3 +58,4 @@ Route::get('getindikator/{id}', function ($id) {
     $indikator = App\Models\indikatorIKU::where('jenisiku',$id)->get();
     return response()->json($indikator);
 });
+Route::post('full-calender/action', [FullCalenderController::class, 'action']);

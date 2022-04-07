@@ -28,6 +28,7 @@
                         <tr>
                             <th scope="col">No</th>
                             <th scope="col">Pekerjaan</th>
+                            <th scope="col">Keterangan</th>
                             <th scope="col">Jatuh Tempo</th>
                         </tr>
                         </thead>
@@ -37,12 +38,16 @@
                                 <td>
                                     {{$index+1}}
                                 </td>
+                                
                                 <td>
                                     <a href="/detailcoe/{{$agenda[$index]->id}}" id="" value= $index>
-                                    {{$agenda[$index]->aktivitas}}
+                                    {{$agenda[$index]->title}}
                                 </td>
                                 <td>
-                                    {{$agenda[$index]->deadline}}</a>
+                                    {{$agenda[$index]->keterangan}}
+                                </td>
+                                <td>
+                                    {{$agenda[$index]->end}}</a>
                                 </td>
                                 
                             </tr>

@@ -25,37 +25,49 @@ hr {
 
 </style>
 <div class="content"style="background-image: url('{{Storage::url('assetsweb/coe.jpg')}}'); background-size: 100%;  backdrop-filter: blur(20px); height: 100vh">
-    <div class="blur" style="background: rgba(235, 238, 192, 0.55); backdrop-filter: blur(2px);height: 100%;width: 100%;">
+    <div class="blur" style="background: rgba(241, 243, 215, 0.55); backdrop-filter: blur(2px);height: 100%;width: 100%;">
+        
         <div class="cnt" style="padding-left: 4%; font-size: 25px; ">
-                <h1 style="text-align: center; padding-top: 2%; padding-bottom: 3%">Tampil COE</h1>
-                <div class="form-group">
-                    <a class="btn btn-dark" href="" role="button" style="position: absolute;right: 80px;width: 100px;margin-bottom: 3%;">Edit COE</a>
-                </div>
-                <div class="form-group">
-                    <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Tanggal: </label>
-                    <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Sampai: </label>
-                </div>
-                <hr style="border-width: 2px; border-color: black">
-                <div class="form-group">
-                    <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Ditunjukkan ke: </label>
-                </div>
-                <hr style="border-width: 2px; border-color: black">
-                <div class="form-group">
-                    <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Aktivitas: </label>
-                </div>
-                <hr style="border-width: 2px; border-color: black">
-                <div class="form-group">
-                    <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Keterangan: </label>
-                </div>
-                <hr style="border-width: 2px; border-color: black">
-                <div class="form-group">
-                    <label for="password-confirm" class="col-md-4 col-form-label text-md-right">File: </label>
-                </div>
-                <hr style="border-width: 2px; border-color: black">
-                <div class="form-group">
-                    <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Link Lampiran: </label>
-                </div>
-        </div>
+            <h1 style="text-align: center; padding-top: 2%; padding-bottom: 3%">Detil COE</h1>
+            <tr>
+                <a class="btn btn-dark" href="/editcoe/{{$detil->id}}" role="button" style="display:flex; flex-direction: row; width: 150px; margin-left: auto">Edit Bebarengan</a>
+            </tr>                
+            <tr>
+                <label for="password-confirm">Tanggal: </label>
+                {{date('d-m-Y', strtotime($detil->start));}}&emsp;
+                <label for="password-confirm">Sampai: </label>
+                {{date('d-m-Y', strtotime($detil->end));}}
+            </tr>
+            <hr style="border-width: 2px; border-color: black">
+            <tr>
+                <label for="password-confirm">Ditunjukkan ke: </label>
+                {{$detil->email}}
+            </tr>
+            <hr style="border-width: 2px; border-color: black">
+            <tr>
+                <label for="password-confirm">Aktivitas: </label>
+                {{$detil->title}}
+            </tr>
+            <hr style="border-width: 2px; border-color: black">
+            <tr>
+                <label for="password-confirm">Keterangan: </label>
+                {{$detil->keterangan}}
+            </tr>
+    
+            <hr style="border-width: 2px; border-color: black">
+            <tr>
+                <label for="password-confirm">File: </label>
+                <a href={{asset('storage/coe/'.$detil->file1)}}>{{$detil->file1}}</a> &emsp;
+                <a href={{asset('storage/coe/'.$detil->file2)}}>{{$detil->file2}}</a> &emsp;
+                <a href={{asset('storage/coe/'.$detil->file3)}}>{{$detil->file3}}</a> &emsp;
+            </tr>
+            <hr style="border-width: 2px; border-color: black">
+            <tr>
+                <label for="password-confirm">Link Lampiran: </label>
+                {{$detil->linklampiran}}
+            </tr>
+    </div>
+        
         
     </div>   
 </div>

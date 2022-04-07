@@ -25,11 +25,11 @@
                 @csrf
                 <div class="form-group">
                     <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Periode</label>
-                    <input type="date" name="periode" id="periode" value="{{$iku->periode}}">
+                    <input type="date" name="periode" id="periode" value="{{$iku->periode}}" required>
                 </div>
                 <div class="form-group">
                     <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Jenis IKU</label>
-                    <select name="jenisiku" id="jenisiku">
+                    <select name="jenisiku" id="jenisiku" required>
                         <option value="{{$jenis->id}}">{{$jenis->jenisdesc}}</option>
                         <option value="1">IKU Implementasi</option>
                         <option value="2">IKU Rekomendasi</option>
@@ -40,13 +40,13 @@
                 </div>
                 <div class="form-group">
                     <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Indikator</label>
-                    <select name="indikator" id="indikator">
-                        <option value="">{{$jenis->indikatordesc}}</option>
+                    <select name="indikator" id="indikator" required>
+                        <option value="{{$jenis->indikator}}">{{$jenis->indikatordesc}}</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Realisasi</label>
-                    <input type="text" name="realisasi" id="realisasi" value="{{$iku->realisasi}}">
+                    <input type="text" name="realisasi" id="realisasi" value="{{$iku->realisasi}}" required>
                 </div>
                 <div class="form-group">
                     <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Status</label>
@@ -57,7 +57,7 @@
                 </div>
                 <div class="form-group">
                     <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Keterangan</label>
-                    <textarea name="ket" id="ket" cols="45" rows="5">{{$iku->keterangan}}</textarea>
+                    <textarea name="ket" id="ket" cols="45" rows="5" required>{{$iku->keterangan}}</textarea>
                 </div>
                 <div class="form-group"  style="display: block; margin-left: 50%;margin-right: auto;width: 40%;">
                     <button type="submit" class="btn btn-success">Simpan</button>
