@@ -21,16 +21,16 @@
     <div class="blur" style="background: rgba(235, 238, 192, 0.55); backdrop-filter: blur(2px);height: 100%;width: 100%;">
         <div class="cnt" style="padding-left: 4% ">
                 <h1 style="text-align: center; padding-top: 2%; padding-bottom: 3%">Tambah COE</h1>
-            <form action="" method="POST" style="padding: 0 20%">
+            <form action="" method="POST" style="padding: 0 20%" enctype="multipart/form-data">
                 @csrf
                 <div class="form-row">
                     <div class="form-group col-md-6">
                       <label for="inputEmail4">Tanggal: </label>
-                        <input type="date" name="tanggal" id="tanggal">
+                        <input type="datetime-local" name="tanggal" id="tanggal">
                     </div>
                     <div class="form-group col-md-6">
                       <label for="inputPassword4">S/D: </label>
-                      <input type="date" name="sd" id="sd">
+                      <input type="datetime-local" name="sd" id="sd">
                     </div>
                 </div>               
                 <div class="form-group">
@@ -40,7 +40,11 @@
                 <div class="form-group">
                     <label for="password-confirm">Ditunjukkan ke</label>
                     <select name="ditunjukkan" id="ditunjukkan">
-                        <option value=""></option>
+                        @forelse ( $user as $idx => $value )
+                            <option value="{{$user[$idx]->email}}">{{$user[$idx]->email}}</option>
+                        @empty
+                            <option value=""></option>
+                        @endforelse
                     </select>
                 </div>
                 <div class="form-group">

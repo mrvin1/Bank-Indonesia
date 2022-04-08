@@ -56,12 +56,51 @@ class COEController extends Controller
     		}
     	}
     }
-	//belum selesai
    public function addCOE(){
-       return view('addCOE');
+	   $user = User::all();
+       return view('addCOE',['user'=>$user]);
    }
    public function addCOEPost(Request $req){
-	   
+	$coe=$req->validate([
+		'tanggal' => ['required'],
+		'sd' => ['required'],
+		'aktivitas' => ['required'],
+		'ditunjukkan' => ['required'],
+		'ket' => ['required'],
+		'link'=>['string'],
+	]);
+	
+	$file1 = $req['file1'];
+	$file2 = $req['file2'];
+	$file3 = $req['file3'];
+	$fileName1="";
+	$fileName2="";
+	$fileName3="";
+	if($file1!=null){
+		$fileName1 = time() . '.' . $file1->getClientOriginalExtension();
+		Storage::putFileAs('public/coe', $file1, $fileName1);
+	}
+	if($file2!=null){
+		$fileName2 = time() . '.' . $file2->getClientOriginalExtension();
+		Storage::putFileAs('public/coe', $file2, $fileName2);
+	}
+	if($file3!=null){
+		$fileName3 = time() . '.' . $file3->getClientOriginalExtension();
+		Storage::putFileAs('public/coe', $file3, $fileName3);
+	}
+	$coe=Agenda::create([
+		'start' => $coe['tanggal'],
+		'end'=>$coe['sd'],
+		'title'=>$coe['aktivitas'],
+		'email'=>$coe['ditunjukkan'],
+		'keterangan'=>$coe['ket'],
+		'linklampiran'=>$coe['link'],
+		'file1'=>$fileName1,
+		'file2'=>$fileName2,
+		'file3'=>$fileName3,  
+	]);
+	$coe->save();
+	return redirect('coe');
    }
    
    public function detailCOE($idx){
@@ -74,7 +113,6 @@ class COEController extends Controller
 		$email = User::all();
        return view('editCOE',['detil'=>$detil, 'email'=>$email]);
    }
-   //belum selesai
    public function editCOEPost($idx, Request $req){
 	$coeEdit=Agenda::find($idx);
 	$coe=$req->validate([
@@ -126,5 +164,5 @@ class COEController extends Controller
 	$coeEdit->save();
 	return redirect('coe');
    }
-    
+
 }

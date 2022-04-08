@@ -47,84 +47,10 @@ var calendar = $('#calendar').fullCalendar({
     events:'/coe',
     selectable:true,
     selectHelper: true,
-    // select:function(start, end, allDay)
-    // {
-    //     var title = prompt('Event Title:');
-
-    //     if(title)
-    //     {
-    //         var start = $.fullCalendar.formatDate(start, 'Y-MM-DD HH:mm:ss');
-
-    //         var end = $.fullCalendar.formatDate(end, 'Y-MM-DD HH:mm:ss');
-
-    //         $.ajax({
-    //             url:"/full-calender/action",
-    //             type:"POST",
-    //             data:{
-    //                 title: title,
-    //                 start: start,
-    //                 end: end,
-    //                 type: 'add'
-    //             },
-    //             success:function(data)
-    //             {
-    //                 calendar.fullCalendar('refetchEvents');
-    //                 alert("Event Created Successfully");
-    //             }
-    //         })
-    //     }
-    // },
-    // editable:true,
-    // eventResize: function(event, delta)
-    // {
-    //     var start = $.fullCalendar.formatDate(event.start, 'Y-MM-DD HH:mm:ss');
-    //     var end = $.fullCalendar.formatDate(event.end, 'Y-MM-DD HH:mm:ss');
-    //     var title = event.title;
-    //     var id = event.id;
-    //     $.ajax({
-    //         url:"/full-calender/action",
-    //         type:"POST",
-    //         data:{
-    //             title: title,
-    //             start: start,
-    //             end: end,
-    //             id: id,
-    //             type: 'update'
-    //         },
-    //         success:function(response)
-    //         {
-    //             calendar.fullCalendar('refetchEvents');
-    //             alert("Event Updated Successfully");
-    //         }
-    //     })
-    // },
-    // eventDrop: function(event, delta)
-    // {
-    //     var start = $.fullCalendar.formatDate(event.start, 'Y-MM-DD HH:mm:ss');
-    //     var end = $.fullCalendar.formatDate(event.end, 'Y-MM-DD HH:mm:ss');
-    //     var title = event.title;
-    //     var id = event.id;
-    //     $.ajax({
-    //         url:"/full-calender/action",
-    //         type:"POST",
-    //         data:{
-    //             title: title,
-    //             start: start,
-    //             end: end,
-    //             id: id,
-    //             type: 'update'
-    //         },
-    //         success:function(response)
-    //         {
-    //             calendar.fullCalendar('refetchEvents');
-    //             alert("Event Updated Successfully");
-    //         }
-    //     })
-    // },
 
     eventClick:function(event)
     {
-        if(confirm("Are you sure you want to remove it?"))
+        if(confirm("Apakah anda yakin ingin menghapus agenda ini?"))
         {
             var id = event.id;
             $.ajax({
@@ -137,7 +63,7 @@ var calendar = $('#calendar').fullCalendar({
                 success:function(response)
                 {
                     calendar.fullCalendar('refetchEvents');
-                    alert("Event Deleted Successfully");
+                    alert("Agenda berhasil dihapus!");
                 }
             })
         }
@@ -146,7 +72,6 @@ var calendar = $('#calendar').fullCalendar({
 
 });
 
-  
 </script>
   
 </body>

@@ -130,7 +130,7 @@ class BebarenganController extends Controller
         $bebarenganEdit->save();
         return redirect('bebarengan');
     } 
-
+    //belum selesai
     public function delBebarengan($idx){
         $bebarengan=Meeting::find($idx);
         $bebarengan->delete();

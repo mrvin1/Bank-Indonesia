@@ -54,8 +54,4 @@ Route::delete('/delbebarengan/{idx}', [App\Http\Controllers\BebarenganController
 Route::get('/menukpw', [App\Http\Controllers\ProfilKpwController::class, 'viewMenu'])->name('viewMenuKpw')->middleware('user');
 Route::get('/menuwil', [App\Http\Controllers\ProfilWilayahKerjaController::class, 'viewMenu'])->name('viewMenuWil')->middleware('user');
 
-Route::get('getindikator/{id}', function ($id) {
-    $indikator = App\Models\indikatorIKU::where('jenisiku',$id)->get();
-    return response()->json($indikator);
-});
-Route::post('full-calender/action', [FullCalenderController::class, 'action']);
+Route::post('full-calender/action', [App\Http\Controllers\COEController::class, 'action']);
