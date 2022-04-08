@@ -14,6 +14,8 @@ class IKUExport implements FromCollection
     public function collection()
     {
         $tgl = new Carbon('2022-02-01');
-        return IKU::join('indikatoriku','indikatoriku.id','=','ikus.indikator')->join('jenisiku','jenisiku.id','=','indikatoriku.jenisiku')->whereMonth('periode','=',$tgl->month)->whereYear('periode','=',$tgl->year)->get();  
+        // $iku=IKU::join('indikatoriku','indikatoriku.id','=','ikus.indikator')->join('jenisiku','jenisiku.id','=','indikatoriku.jenisiku')->whereMonth('periode','=',$tgl->month)->whereYear('periode','=',$tgl->year)->get(); 
+        $iku=IKU::all();
+        return $iku; 
     }
 }

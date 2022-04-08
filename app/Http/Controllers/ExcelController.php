@@ -11,4 +11,5 @@ class ExcelController extends Controller
     public function export(){
         return Excel::download(new IKUExport, 'iku.xlsx');
     }
+    
 }
