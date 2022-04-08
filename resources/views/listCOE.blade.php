@@ -17,7 +17,7 @@
     <div class="content"style="background-image: url('{{Storage::url('assetsweb/coe.jpg')}}'); background-size: 100%;  backdrop-filter: blur(20px); height: 130%">
         <div class="blur" style="background: rgba(235, 238, 192, 0.55); backdrop-filter: blur(5px);height: 100%;width: 100%;"> 
             <div class="b" style="display: inline-block;position: absolute;right: 0px;width: 300px;">
-                <a class="btn btn-success" href="{{route('addCOE')}}" role="button">Tambah</a>
+                <a class="btn btn-success" href="{{route('addCOE')}}" role="button" >Tambah</a>
             </div>
             <div class="container" >
                 <br />
