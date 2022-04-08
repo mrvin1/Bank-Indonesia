@@ -50,7 +50,7 @@
                                 </td>
                             </tr>
                             @empty
-                                Kosong..
+                               <td>Kosong..</td> 
                             @endforelse                            
                         </tr>
                         </tbody>
