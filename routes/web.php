@@ -53,5 +53,5 @@ Route::post('/editbebarengan/{idx}', [App\Http\Controllers\BebarenganController:
 Route::delete('/delbebarengan/{idx}', [App\Http\Controllers\BebarenganController::class, 'delBebarengan'])->name('delBebarengan')->middleware('user');
 Route::get('/menukpw', [App\Http\Controllers\ProfilKpwController::class, 'viewMenu'])->name('viewMenuKpw')->middleware('user');
 Route::get('/menuwil', [App\Http\Controllers\ProfilWilayahKerjaController::class, 'viewMenu'])->name('viewMenuWil')->middleware('user');
-
+Route::get('/exportxlsx', [App\Http\Controllers\ExcelController::class, 'export'])->name('exportxlsx')->middleware('user');
 Route::post('full-calender/action', [App\Http\Controllers\COEController::class, 'action']);
