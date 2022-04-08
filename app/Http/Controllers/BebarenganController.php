@@ -133,6 +133,16 @@ class BebarenganController extends Controller
     //belum selesai
     public function delBebarengan($idx){
         $bebarengan=Meeting::find($idx);
+        if($bebarengan->file1!=""){
+            Storage::delete('public/bebarengan',$bebarengan->file1);
+        }
+        if($bebarengan->file2!=""){
+            Storage::delete('public/bebarengan',$bebarengan->file2);
+        }
+        if($bebarengan->file3!=""){
+            Storage::delete('public/bebarengan',$bebarengan->file3);
+        }
+        
         $bebarengan->delete();
         return redirect()->back();
     }

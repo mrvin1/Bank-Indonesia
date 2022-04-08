@@ -26,32 +26,20 @@ class COEController extends Controller
     {
     	if($request->ajax())
     	{
-    		if($request->type == 'add')
-    		{
-    			$event = Agenda::create([
-    				'title'		=>	$request->title,
-    				'start'		=>	$request->start,
-    				'end'		=>	$request->end
-    			]);
-
-    			return response()->json($event);
-    		}
-
-    		if($request->type == 'update')
-    		{
-    			$event = Agenda::find($request->id)->update([
-    				'title'		=>	$request->title,
-    				'start'		=>	$request->start,
-    				'end'		=>	$request->end
-    			]);
-
-    			return response()->json($event);
-    		}
-
+			//belum selesai
     		if($request->type == 'delete')
     		{
-    			$event = Agenda::find($request->id)->delete();
-
+				$event = Agenda::find($request->id);
+				if($event->file1!=""){
+					Storage::delete('public/coe',$event->file1);
+				}
+				if($event->file2!=""){
+					Storage::delete('public/coe',$event->file2);
+				}
+				if($event->file3!=""){
+					Storage::delete('public/coe',$event->file3);
+				}
+				$event->delete();
     			return response()->json($event);
     		}
     	}
