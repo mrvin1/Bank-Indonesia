@@ -19,6 +19,11 @@ Route::get('/', function () {
     return redirect('/login');
 });
 
+Route::get('getindikator/{id}',function($id){
+    $indikator = App\Models\indikatorIKU::where('jenisiku',$id)->get();
+    return response()->json($indikator);
+});
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('user');
 Route::get('/notice', [App\Http\Controllers\AnnouncementController::class, 'viewAnnouncement'])->name('notice')->middleware('user');
 Route::get('/accountmanager', [App\Http\Controllers\AccountManagementController::class, 'viewList'])->name('accountManager')->middleware('admin');
@@ -55,3 +60,5 @@ Route::get('/menukpw', [App\Http\Controllers\ProfilKpwController::class, 'viewMe
 Route::get('/menuwil', [App\Http\Controllers\ProfilWilayahKerjaController::class, 'viewMenu'])->name('viewMenuWil')->middleware('user');
 Route::get('/exportxlsx', [App\Http\Controllers\ExcelController::class, 'export'])->name('exportxlsx')->middleware('user');
 Route::post('full-calender/action', [App\Http\Controllers\COEController::class, 'action']);
+
+
