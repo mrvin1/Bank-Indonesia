@@ -11,7 +11,6 @@ class AnnouncementController extends Controller
 {
     public function viewAnnouncement(){
         $auth = Auth::user()->email;
-        $now = Carbon::now();
         $agenda=Agenda::where('email', $auth)->where('end', '>=',Carbon::now())->paginate(5);
         return view('announcement',['agenda'=>$agenda]);
     }

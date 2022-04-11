@@ -22,7 +22,7 @@ Route::get('/', function () {
 Route::get('getindikator/{id}',function($id){
     $indikator = App\Models\indikatorIKU::where('jenisiku',$id)->get();
     return response()->json($indikator);
-});
+})->middleware('user');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('user');
 Route::get('/notice', [App\Http\Controllers\AnnouncementController::class, 'viewAnnouncement'])->name('notice')->middleware('user');
@@ -59,6 +59,6 @@ Route::delete('/delbebarengan/{idx}', [App\Http\Controllers\BebarenganController
 Route::get('/menukpw', [App\Http\Controllers\ProfilKpwController::class, 'viewMenu'])->name('viewMenuKpw')->middleware('user');
 Route::get('/menuwil', [App\Http\Controllers\ProfilWilayahKerjaController::class, 'viewMenu'])->name('viewMenuWil')->middleware('user');
 Route::get('/exportxlsx/{tgl}', [App\Http\Controllers\ExcelController::class, 'export'])->name('exportxlsx')->middleware('user');
-Route::post('full-calender/action', [App\Http\Controllers\COEController::class, 'action']);
+Route::post('full-calender/action', [App\Http\Controllers\COEController::class, 'action'])->middleware('user');
 
 

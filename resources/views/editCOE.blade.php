@@ -26,11 +26,11 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                       <label for="inputEmail4">Tanggal: </label>
-                        <input type="datetime-local" name="tanggal" id="tanggal" required value={{$detil->start}}>
+                        <input type="datetime-local" name="tanggal" id="tanggal" required value=<?php echo date('Y-m-d\TH:i', strtotime($detil->start)); ?>>
                     </div>
                     <div class="form-group col-md-6">
                       <label for="inputPassword4">S/D: </label>
-                      <input type="datetime-local" name="sd" id="sd" required value={{$detil->end}}>
+                      <input type="datetime-local" name="sd" id="sd" required value=<?php echo date('Y-m-d\TH:i', strtotime($detil->end)); ?>>
                     </div>
                 </div>               
                 <div class="form-group">
