@@ -21,15 +21,15 @@ class IKUExport implements FromView
     //     return $iku; 
     // }
 
-    // public function __construct(string $keyword)
-    // {
-    //     $this->periode = $keyword;
-    // }
+    public function __construct(string $keyword)
+    {
+        $this->periode = $keyword;
+    }
     public function view(): View
     {
-        $tgl = new Carbon('2022-02-01');
+         $tgl = new Carbon($this->periode);
         return view('ikuexport', [
-            'data' => IKU::join('indikatoriku','indikatoriku.id','=','ikus.indikator')->join('jenisiku','jenisiku.id','=','indikatoriku.jenisiku')->whereMonth('periode','=',$tgl->month)->whereYear('periode','=',$tgl->year)->orderBy("indikator")->get()
+            'data' => IKU::join('indikatoriku','indikatoriku.id','=','ikus.indikator')->join('jenisiku','jenisiku.id','=','indikatoriku.jenisiku')->whereMonth('periode','=',$tgl)->whereYear('periode','=',$tgl)->orderBy("indikator")->get()
         ]);
     }
 

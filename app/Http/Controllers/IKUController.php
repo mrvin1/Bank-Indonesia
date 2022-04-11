@@ -14,6 +14,19 @@ class IKUController extends Controller
         $iku=IKU::join('indikatorIKU','indikatorIKU.id','=', 'indikator')->paginate(3);
         return view('listIKU',['iku'=>$iku]);
     }
+
+    public function store(Request $request)
+    {
+        switch ($request->input('action')) {
+            case 'search':
+                return $this->searchIKU($request);
+                break;
+            case 'export':
+                return redirect()->route('exportxlsx', [$request->tgl]);
+                break;
+        }
+    }
+
     public function searchIKU(Request $req)
     {
         if($req['cari']==null&&$req['jenisiku']==null){ //cari periode

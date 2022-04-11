@@ -8,8 +8,8 @@ use Maatwebsite\Excel\Facades\Excel;
 
 class ExcelController extends Controller
 {
-    public function export(){
-        return Excel::download(new IKUExport, 'iku.xlsx');
+    public function export($tgl){
+        return Excel::download(new IKUExport($tgl), 'iku.xlsx');
     }
     
 }

@@ -36,7 +36,7 @@ Route::delete('/delaccount/{idx}', [App\Http\Controllers\AccountManagementContro
 Route::get('/changepassword', [App\Http\Controllers\AccountManagementController::class, 'changePassword'])->name('changePassword')->middleware('user');
 Route::post('/changepassword', [App\Http\Controllers\AccountManagementController::class, 'changePass'])->name('changePass')->middleware('user');
 Route::get('/listiku', [App\Http\Controllers\IKUController::class, 'listIKU'])->name('listIKU')->middleware('user');
-Route::post('/listiku', [App\Http\Controllers\IKUController::class, 'searchIKU'])->name('searchIKU')->middleware('user');
+Route::post('/listiku', [App\Http\Controllers\IKUController::class, 'store'])->name('store')->middleware('user');
 Route::get('/addiku', [App\Http\Controllers\IKUController::class, 'addIKU'])->name('addIKU')->middleware('user');
 Route::post('/addiku', [App\Http\Controllers\IKUController::class, 'addIKUPOST'])->name('addIKUPOST')->middleware('user');
 Route::get('/detailiku/{idx}', [App\Http\Controllers\IKUController::class, 'detailIKU'])->name('detailIKU')->middleware('user');
@@ -58,7 +58,7 @@ Route::post('/editbebarengan/{idx}', [App\Http\Controllers\BebarenganController:
 Route::delete('/delbebarengan/{idx}', [App\Http\Controllers\BebarenganController::class, 'delBebarengan'])->name('delBebarengan')->middleware('user');
 Route::get('/menukpw', [App\Http\Controllers\ProfilKpwController::class, 'viewMenu'])->name('viewMenuKpw')->middleware('user');
 Route::get('/menuwil', [App\Http\Controllers\ProfilWilayahKerjaController::class, 'viewMenu'])->name('viewMenuWil')->middleware('user');
-Route::get('/exportxlsx', [App\Http\Controllers\ExcelController::class, 'export'])->name('exportxlsx')->middleware('user');
+Route::get('/exportxlsx/{tgl}', [App\Http\Controllers\ExcelController::class, 'export'])->name('exportxlsx')->middleware('user');
 Route::post('full-calender/action', [App\Http\Controllers\COEController::class, 'action']);
 
 

@@ -30,14 +30,12 @@ a{
      color:#4183D7;
 }
 
-
-
 </style>
 <title>Home</title>
 
-<div class="content" style="background-image: url('{{Storage::url('assetsweb/bipwt.jpg')}}'); background-size: 100%; backdrop-filter: blur(20px);height: 110%; width: 100%;">
+<div class="content" style="background-image: url('{{Storage::url('assetsweb/bipwt.jpg')}}'); background-repeat:none; background-size: 100%; backdrop-filter: blur(20px);height: 600px; width: 100%; ">
     <div class="blur" style="background: rgba(237, 205, 187, 0.55); backdrop-filter: blur(2px);height: 100%;width: 100%;">
-        <h1 style="border-color: white; display: flex; justify-content: center; padding-top: 2%;padding-bottom: 2%">Selamat Datang {{auth()->user()->name}}</h1>
+        <h1 style="border-color: white; display: flex; justify-content: center; padding-top: 2%;padding-bottom: 5%">Selamat Datang {{auth()->user()->name}}</h1>
         <div class="box">
             <div class="container">
                 <div class="card-deck">
@@ -60,39 +58,19 @@ a{
                                 <h5 class="card-title">IKU</h5>
                             </div>
                         </div>
+                    
                         <div class="card">
                             <a href="{{route('viewCOE')}}"><img class="card-img-top" src="{{Storage::url('assetsweb/calendar.png')}}" alt="Card image cap"></a>
                             <div class="card-body">
                                 <h5 class="card-title">Calendar of Event - COE</h5>
                             </div>
                         </div>
-                    </div>
-                    <div class="row" style="padding-top: 2%">
                         <div class="card">
                             <a href="{{route('viewBebarengan')}}"><img class="card-img-top" src="{{Storage::url('assetsweb/meeting.png')}}" alt="Card image cap"></a>
                             <div class="card-body">
                                 <h5 class="card-title">Bebarengan</h5>
                             </div>
                         </div>
-                        <div class="card">
-                            <a href="{{route('changePassword')}}"><img class="card-img-top" src="{{Storage::url('assetsweb/key-chain.png')}}" alt="Card image cap"></a>
-                            <div class="card-body">
-                                <h5 class="card-title">Ganti Password</h5>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <a href="{{route('accountManager')}}"><img class="card-img-top" src="{{Storage::url('assetsweb/skills.png')}}" alt="Card image cap"></a>
-                            <div class="card-body">
-                                <h5 class="card-title">Manajemen Akun</h5>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <a href="{{route('logout')}}"><img class="card-img-top" src="{{Storage::url('assetsweb/exit.png')}}" alt="Card image cap"></a>
-                            <div class="card-body">
-                                <h5 class="card-title">Keluar</h5>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>    

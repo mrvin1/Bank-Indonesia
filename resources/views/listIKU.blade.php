@@ -24,8 +24,8 @@ input[type=search]::-webkit-search-cancel-button {
 <div class="bg-image"style="background-image: url('{{Storage::url('assetsweb/mountain.jpg')}}'); background-size: 100%;  backdrop-filter: blur(20px); height: 100vh">
     <div class="blur" style="background: rgba(245, 243, 243, 0.55); backdrop-filter: blur(2px);height: 100%;width: 100%;">
         <h1 style="text-align: center; padding-top: 2%;">Daftar IKU</h1>
-        <div class="b" style="display: inline-block;position: absolute;right: 0px;width: 300px;">
-            <a class="btn btn-dark" href="exportxlsx/" role="button">Export .xlsx</a>
+        <div class="b" style="display: inline-block;position: absolute;right: 0px;width: 150px;">
+            {{-- <a class="btn btn-dark" href="exportxlsx/" role="button">Export .xlsx</a> --}}
             <a class="btn btn-success" href="{{route('addIKU')}}" role="button">Tambah</a>
         </div>
         <div class="row" style="padding: 3%; flex-direction: row" >
@@ -48,7 +48,8 @@ input[type=search]::-webkit-search-cancel-button {
                                         <option value="5">IKU Manajemen</option>
                                     </select>
                                     <br>
-                                    <button type="submit" class="btn btn-primary" style="margin-top: 5%">Implementasikan</button>  
+                                    <button type="submit" name="action" value="search" class="btn btn-primary" style="margin-top: 5%">Implementasikan</button>  
+                                    <button type="submit" name="action" value="export" class="btn btn-dark" style="margin-top: 5%">Download .xlsx</button>  
                             </form>
                         </div>
 
