@@ -73,7 +73,7 @@
                 </div>
                 <div class="form-group">
                     <label for="password-confirm">Link lampiran:</label>
-                    <textarea class="form-control" rows="3" name="link" id="link" required>{{$detil->linklampiran}}</textarea>
+                    <textarea class="form-control" rows="1" name="link" id="link" required>{{$detil->linklampiran}}</textarea>
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-success">Simpan</button>

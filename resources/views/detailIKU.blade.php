@@ -19,7 +19,7 @@
 </style>
 <div class="content"style="background-image: url('{{Storage::url('assetsweb/mountain.jpg')}}'); background-size: 100%;  backdrop-filter: blur(20px); height: 100vh">
     <div class="blur" style="background: rgba(235, 201, 201, 0.55); backdrop-filter: blur(2px);height: 100%;width: 100%;">
-        <div class="cnt" style="padding-left: 4%; font-size: 25px; ">
+        <div class="cnt" style="padding: 2% 10% 2% 10%; font-size: 18px; font-family: Arial, Helvetica, sans-serif ">
                 <h1 style="text-align: center; padding-top: 2%; padding-bottom: 3%">Rincian IKU</h1>
 
                 <tr>
@@ -35,22 +35,22 @@
                         {{$jenis->jenisdesc}}
                     </td>
                 </tr>
-                <hr style="border-width: 2px; border-color: black">
+                <hr style="border-width: 1px; border-color: black">
                 <tr>
                     <label for="password-confirm">Indikator: </label>
                     {{$jenis->indikatordesc}}
                 </tr>
-                <hr style="border-width: 2px; border-color: black">
+                <hr style="border-width: 1px; border-color: black">
                 <tr>
                     <label for="password-confirm">Realisasi: </label>
                     {{$iku->realisasi}}
                 </tr>
-                <hr style="border-width: 2px; border-color: black">
+                <hr style="border-width: 1px; border-color: black">
                 <tr>
                     <label for="password-confirm">Status: </label>
                     {{$iku->status}}
                 </tr>
-                <hr style="border-width: 2px; border-color: black">
+                <hr style="border-width: 1px; border-color: black">
                 <tr>
                     <label for="password-confirm">Keterangan: </label>
                     {{$iku->keterangan}}

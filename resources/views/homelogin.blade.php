@@ -49,7 +49,7 @@ a{
                         <div class="card">
                             <a href="{{route('viewMenuKpw')}}"><img class="card-img-top" src="{{Storage::url('assetsweb/building.png')}}" alt="Card image cap"></a>
                             <div class="card-body">
-                                <h5 class="card-title">Profil Kpw. Purwokerto</h5>
+                                <h5 class="card-title">Profil KPw Purwokerto</h5>
                             </div>
                         </div>
                         <div class="card">

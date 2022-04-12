@@ -21,6 +21,7 @@ class MeetingSeeder extends Seeder
         for($i=1;$i<=10;$i++){
             Meeting::create([
                 'lokasi' => "ruang $i",
+                'nama' => $dummy->name(),
                 'judul' => "judul $i",
                 'tujuan' => $dummy->text(),
                 'notulen' => $dummy->text(),

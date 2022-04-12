@@ -19,6 +19,7 @@ class BebarenganController extends Controller
     public function addBebarenganPost(Request $req){
         $bebarengan=$req->validate([
             'tanggal' => ['required'],
+            'nama' => ['required'],
             'loc' => ['required','string'],
             'title' => ['required', 'string'],
             'for' => ['required','string'],
@@ -44,6 +45,7 @@ class BebarenganController extends Controller
 
         $bebarengan=Meeting::create([
             'tanggalrapat' => $bebarengan['tanggal'],
+            'nama' => $bebarengan['nama'],
             'lokasi'=>$bebarengan['loc'],
             'judul'=>$bebarengan['title'],
             'tujuan'=>$bebarengan['for'],
@@ -80,6 +82,7 @@ class BebarenganController extends Controller
         $bebarenganEdit=Meeting::find($idx);
         $bebarengan=$req->validate([
             'tanggal' => ['required'],
+            'nama' => ['required'],
             'loc' => ['required','string'],
             'title' => ['required', 'string'],
             'for' => ['required','string'],
@@ -104,6 +107,7 @@ class BebarenganController extends Controller
         }
 
         $bebarenganEdit->tanggalrapat = $bebarengan['tanggal'];
+        $bebarenganEdit->nama = $bebarengan['nama'];
         $bebarenganEdit->lokasi = $bebarengan['loc'];
         $bebarenganEdit->judul = $bebarengan['title'];
         $bebarenganEdit->tujuan = $bebarengan['for'];

@@ -32,10 +32,16 @@
                       <label for="inputPassword4">Lokasi rapat: </label>
                       <input type="text" name="loc" id="loc" required>
                     </div>
-                </div>               
-                <div class="form-group">
-                    <label for="password-confirm">Judul Rapat: </label>
-                    <input type="text" name="title" id="title" required>
+                </div>    
+                <div class="form-row">           
+                    <div class="form-group col-md-6">
+                        <label for="password-confirm">Judul Rapat: </label>
+                        <input type="text" name="title" id="title" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="password-confirm">Pembicara: </label>
+                        <input type="text" name="nama" id="nama" required>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="password-confirm">Tujuan: </label>
@@ -64,7 +70,7 @@
                 </div>
                 <div class="form-group">
                     <label for="password-confirm">Link lampiran:</label>
-                    <input type="text" name="link" id="link">
+                    <textarea class="form-control" rows="1" name="link" id="link" required></textarea>
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-success">Simpan</button>

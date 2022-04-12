@@ -15,6 +15,7 @@ class Meeting extends Migration
     {
         Schema::create('meetings', function (Blueprint $table) {
             $table->id();
+            $table->longText('nama');
             $table->string('lokasi');
             $table->string('judul');
             $table->longText('tujuan');

@@ -32,11 +32,17 @@
                       <label for="inputPassword4">Lokasi rapat: </label>
                       <input type="text" name="loc" id="loc" value="{{$bebarengan->lokasi}}" required>
                     </div>
-                </div>               
-                <div class="form-group">
-                    <label for="password-confirm">Judul Rapat: </label>
-                    <input type="text" name="title" id="tile" value="{{$bebarengan->judul}}" required>
-                </div>
+                </div>   
+                <div class="form-row">            
+                    <div class="form-group col-md-6">
+                        <label for="password-confirm">Judul Rapat: </label>
+                        <input type="text" name="title" id="tile" value="{{$bebarengan->judul}}" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="password-confirm">Pembicara: </label>
+                        <input type="text" name="nama" id="nama" value="{{$bebarengan->nama}}" required>
+                    </div>
+                </div> 
                 <div class="form-group">
                     <label for="password-confirm">Tujuan: </label>
                     <textarea class="form-control" rows="3" name="for" id="for" required>{{$bebarengan->tujuan}}</textarea>
@@ -70,7 +76,7 @@
                 </div>
                 <div class="form-group">
                     <label for="password-confirm">Link lampiran:</label>
-                    <input type="link" name="link" id="link" value="{{$bebarengan->linklampiran}}">
+                    <textarea class="form-control" rows="1" name="link" id="link" required>{{$bebarengan->linklampiran}}</textarea>
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-success">Simpan</button>
