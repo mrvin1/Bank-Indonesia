@@ -57,6 +57,9 @@ Route::get('/editbebarengan/{idx}', [App\Http\Controllers\BebarenganController::
 Route::post('/editbebarengan/{idx}', [App\Http\Controllers\BebarenganController::class, 'editBebarenganPost'])->name('editBebarenganPost')->middleware('user');
 Route::delete('/delbebarengan/{idx}', [App\Http\Controllers\BebarenganController::class, 'delBebarengan'])->name('delBebarengan')->middleware('user');
 Route::get('/menukpw', [App\Http\Controllers\ProfilKpwController::class, 'viewMenu'])->name('viewMenuKpw')->middleware('user');
+Route::post('/import_excel', [App\Http\Controllers\ProfilKpwController::class, 'import_excel'])->name('import_excel')->middleware('user');
+
+
 Route::get('/menuwil', [App\Http\Controllers\ProfilWilayahKerjaController::class, 'viewMenu'])->name('viewMenuWil')->middleware('user');
 Route::get('/exportxlsx/{tgl}', [App\Http\Controllers\ExcelController::class, 'export'])->name('exportxlsx')->middleware('user');
 Route::post('full-calender/action', [App\Http\Controllers\COEController::class, 'action'])->middleware('user');

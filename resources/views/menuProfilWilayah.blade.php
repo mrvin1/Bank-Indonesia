@@ -22,7 +22,7 @@
         <h1 style="text-align: center; padding: 3% 0">Profil Wilayah Kerja</h1>
         <hr class="solid" style=" border-top: 4px solid rgb(0, 0, 0); margin: 0 12%;"><br>
         <div class="satu" style="display: flex;justify-content: center;align-items: center;height: 200px; flex-direction: column">
-            <h2>Silahkan Upload File .csv: </h2><br>
+            <h2>Silahkan Upload File .xlsx: </h2><br>
             <button type="submit" class="btn btn-secondary" style="width: 150px">Pilih File</button> <br>
             <button type="submit" class="btn btn-danger"  style="width: 150px">Upload</button>
         </div>
