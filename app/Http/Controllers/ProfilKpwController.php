@@ -1,14 +1,49 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\profilKPw;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Imports\profilKPwImport;
+use Session;
 
 class ProfilKpwController extends Controller
 {
     public function viewMenu(){
         return view('menuProfilKpw');
     }
+	public function viewTable(){
+		$organik=profilKPw::where('status','like','organik')->paginate(5);
+		$countorganik=profilKPw::where('status','like','organik')->count();
+		$nonorganik=profilKPw::where('status','like','non-organik')->paginate(5);
+		$countnonorganik=profilKPw::where('status','like','non-organik')->count();
+		return view('profilKpwTable', ['organik'=>$organik, 'nonorganik'=>$nonorganik, 'corganik'=>$countorganik, 'cnonorganik'=>$countnonorganik]);
+	}
+	public function viewDiagram(){
+		return view('profilKpwDiagram');
+	}
+	public function insertkpw(Request $req){
+		$users=$req->validate([
+            'nip' => ['required','size:5'],
+            'nama' => ['required','string'],
+            'gender' => ['required'],
+            'alamat' => ['required'],
+            'dob' => ['required'],
+            'stat'=>['required'],
+        ]);
+        $users=profilKPw::create([
+            'nip' => $users['nip'],
+            'nama'=>$users['nama'],
+            'jeniskelamin'=>$users['gender'],
+            'alamat'=>$users['alamat'],
+			'tanggallahir'=>$users['dob'],
+            'status'=>$users['stat'],
+        ]);
+        $users->save();
+		Session::flash('sukses','Data Berhasil Dimasukkan!');
+        return redirect()->back();
+		
+	}
     
 	public function import_excel(Request $request) 
 	{
@@ -25,7 +60,9 @@ class ProfilKpwController extends Controller
  
 		// upload ke folder file_siswa di dalam folder public
 		$file->move('importfile',$nama_file);
- 
+		
+		profilKPw::truncate();
+
 		// import data
 		Excel::import(new profilKPwImport, public_path('/importfile/'.$nama_file));
  

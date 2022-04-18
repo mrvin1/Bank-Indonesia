@@ -10,4 +10,5 @@ class profilKPw extends Model
     use HasFactory;
     protected $guarded = [];
     protected $table = "profilkpw";
+    public $timestamps = false;
 }
