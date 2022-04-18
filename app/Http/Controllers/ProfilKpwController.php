@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Imports\profilKPwImport;
 use Session;
+use App\Charts\Kpwchart;
 
 class ProfilKpwController extends Controller
 {
@@ -20,7 +21,12 @@ class ProfilKpwController extends Controller
 		return view('profilKpwTable', ['organik'=>$organik, 'nonorganik'=>$nonorganik, 'corganik'=>$countorganik, 'cnonorganik'=>$countnonorganik]);
 	}
 	public function viewDiagram(){
-		return view('profilKpwDiagram');
+
+		$chart = new Kpwchart;
+		$chart->labels($labels);
+		$chart->dataset('Organik', 'pie', $data);
+
+		return view('profilKpwDiagram',['chart'=>$chart]);
 	}
 	public function insertkpw(Request $req){
 		$users=$req->validate([
