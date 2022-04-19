@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Imports\profilKPwImport;
 use Session;
+use DB;
 use App\Charts\Kpwchart;
 
 class ProfilKpwController extends Controller
@@ -21,12 +22,18 @@ class ProfilKpwController extends Controller
 		return view('profilKpwTable', ['organik'=>$organik, 'nonorganik'=>$nonorganik, 'corganik'=>$countorganik, 'cnonorganik'=>$countnonorganik]);
 	}
 	public function viewDiagram(){
-
-		$chart = new Kpwchart;
-		$chart->labels($labels);
-		$chart->dataset('Organik', 'pie', $data);
-
-		return view('profilKpwDiagram',['chart'=>$chart]);
+        $data = DB::table('profilkpw')
+           ->select(
+            DB::raw('status as status'),
+            DB::raw('count(*) as number'))
+           ->groupBy('status')
+           ->get();
+        $array[] = ['Status', 'Number'];
+        foreach($data as $key => $value)
+        {
+          $array[++$key] = [$value->status, $value->number];
+        }
+        return view('profilKpwDiagram')->with('course', json_encode($array));
 	}
 	public function insertkpw(Request $req){
 		$users=$req->validate([
@@ -64,7 +71,7 @@ class ProfilKpwController extends Controller
 		// membuat nama file unik
 		$nama_file = rand().$file->getClientOriginalName();
  
-		// upload ke folder file_siswa di dalam folder public
+		// upload ke foldera di dalam folder public
 		$file->move('importfile',$nama_file);
 		
 		profilKPw::truncate();
@@ -75,7 +82,6 @@ class ProfilKpwController extends Controller
 		// notifikasi dengan session
 		Session::flash('sukses','Data Berhasil Diimport!');
  
-		// alihkan halaman kembali
 		return redirect('/menukpw');
 	}
 }

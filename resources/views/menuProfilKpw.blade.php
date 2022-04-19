@@ -16,6 +16,7 @@
     margin: 0 auto;
     width: 80%;
 }
+
 </style>
         @if ($errors->has('file'))
 		<span class="invalid-feedback" role="alert">
@@ -30,6 +31,9 @@
 			<strong>{{ $sukses }}</strong>
 		</div>
 		@endif
+		<div class="bg" style="background-color: rgb(221, 209, 166)">
+
+		
         <h1 style="text-align: center; padding: 3% 0">Profil BI Kpw Purwokerto</h1>
         <hr class="solid" style=" border-top: 4px solid rgb(0, 0, 0); margin: 0 12%;"><br>
         <div class="satu" style="display: flex;justify-content: center;align-items: center;height: 200px; flex-direction: column">
@@ -37,6 +41,7 @@
             <button type="button" class="btn btn-primary mr-5" style="width: 150px" data-toggle="modal" data-target="#importExcel">Upload File</button> <br>
 			<button type="button" class="btn btn-danger mr-5" style="width: 200px" data-toggle="modal" data-target="#inputManual">Masukkan Data Manual</button> <br>
             <!-- Import Excel -->
+		</div>
 		<div class="modal fade" id="importExcel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
@@ -131,12 +136,14 @@
 
 
 	</div>
+	<div class="bg" style="background-color: rgb(221, 209, 166)">
         <hr class="solid" style=" border-top: 4px solid rgb(0, 0, 0); margin: 0 20%;"><br>
         <div class="dua" style="display: flex;justify-content: center;align-items: center;height: 200px; flex-direction: column">
             <h2>Lihat Laporan: </h2><br>
             <a href="{{Route('viewDiagramKpw')}}"><button type="submit" class="btn btn-success"  style="width: 150px">Dalam Diagram</button></a> <br>
             <a href="{{Route('viewTableKpw')}}"><button type="submit" class="btn btn-warning" style="width: 150px">Dalam Tabel</button></a>
         </div>
+	</div>
 	
 
 @include('layouts.footer')
