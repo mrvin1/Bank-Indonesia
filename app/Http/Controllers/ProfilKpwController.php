@@ -33,6 +33,7 @@ class ProfilKpwController extends Controller
         {
           $array[++$key] = [$value->status, $value->number];
         }
+
         return view('profilKpwDiagram')->with('course', json_encode($array));
 	}
 	public function insertkpw(Request $req){

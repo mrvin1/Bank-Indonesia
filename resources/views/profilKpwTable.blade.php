@@ -17,8 +17,11 @@
     width: 80%;
 }
 </style>
-<div class="content"style="background-image: url('{{Storage::url('assetsweb/bipwt.jpg')}}'); background-size: 100%;  backdrop-filter: blur(20px); height: 80%">
+<div class="content"style="background-image: url('{{Storage::url('assetsweb/bipwt.jpg')}}'); background-size: 100%;  backdrop-filter: blur(20px); height: 120%">
     <div class="blur" style="background: rgba(211, 173, 212, 0.55); backdrop-filter: blur(2px);height: 100%;width: 100%;">
+        <div class="b" style="display: inline-block;position: absolute;right: 0px;width: 300px;">
+            <a class="btn btn-success" href="{{route('viewDiagramKpw')}}" role="button" >Tampilkan Diagram</a>
+        </div>
         <div class="row" style="padding: 3%; flex-direction: row" >
             <div class="container-fluid">
                 <div class="row">

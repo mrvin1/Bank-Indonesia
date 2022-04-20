@@ -22,12 +22,11 @@
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	
 <div class="content"style="background-image: url('{{Storage::url('assetsweb/bipwt.jpg')}}'); background-size: 100%;  backdrop-filter: blur(20px); height: 80%">
-    <div class="blur" style="background: rgba(211, 173, 212, 0.55); backdrop-filter: blur(2px);height: 100%;width: 100%;">
-
-            <div id="pie_chart" style="width:750px; height:450px;">
+    <div class="blur" style="background: rgba(211, 173, 212, 0.55); backdrop-filter: blur(2px);height: 100%;width: 100%;height: 100%;padding: 0;margin: 0;display: flex;align-items: center;justify-content: center;">
+            <div id="pie_chart" style="width:750px; height:450px; " >
 
             </div>
-                        
+                                  
             <script type="text/javascript">
                 var analytics = <?php echo $course; ?>
         
