@@ -94,8 +94,8 @@
 								<div class="form-group">
 									<label for="password-confirm">Jenis Kelamin:</label>
 									<div class="col-md-6">
-										<input type="radio" name="gender" value="male"> Laki-laki
-										<input type="radio" name="gender" value="female"> Perempuan
+										<input type="radio" name="gender" value="Laki-laki"> Laki-laki
+										<input type="radio" name="gender" value="Perempuan"> Perempuan
 									</div>
 								</div>
 								<div class="form-group">
