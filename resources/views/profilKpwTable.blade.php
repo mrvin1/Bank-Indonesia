@@ -32,7 +32,8 @@
                             <tr>
                                 <th scope="col">NIP</th>
                                 <th scope="col">Nama</th>
-                                <th scope="col">Jenis Kelamin</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Unit Kerja</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -40,7 +41,8 @@
                                  <tr>
                                      <td>{{$organik[$index]->nip}}</td>
                                      <td>{{$organik[$index]->nama}}</td>
-                                     <td>{{$organik[$index]->jeniskelamin}}</td>
+                                     <td>{{$organik[$index]->status}}</td>
+                                     <td>{{$organik[$index]->unitkerja}}</td>
                                  @empty
                                      <td>kosong</td>
                                  @endforelse
@@ -56,17 +58,17 @@
                             <table class="table table-striped table-dark">
                                 <thead>
                                 <tr>
-                                    <th scope="col">NIP</th>
                                     <th scope="col">Nama</th>
-                                    <th scope="col">Jenis Kelamin</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Unit Kerja</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                      @forelse ($nonorganik as $index => $value)
                                      <tr>
-                                         <td>{{$nonorganik[$index]->nip}}</td>
                                          <td>{{$nonorganik[$index]->nama}}</td>
-                                         <td>{{$nonorganik[$index]->jeniskelamin}}</td>
+                                         <td>{{$nonorganik[$index]->status}}</td>
+                                         <td>{{$nonorganik[$index]->unitkerja}}</td>
                                      @empty
                                          <td>kosong</td>
                                      @endforelse

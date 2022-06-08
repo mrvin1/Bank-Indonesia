@@ -15,43 +15,41 @@ class ProfilKpwController extends Controller
         return view('menuProfilKpw');
     }
 	public function viewTable(){
-		$organik=profilKPw::where('status','like','organik')->paginate(5);
-		$countorganik=profilKPw::where('status','like','organik')->count();
-		$nonorganik=profilKPw::where('status','like','non-organik')->paginate(5);
-		$countnonorganik=profilKPw::where('status','like','non-organik')->count();
+		$organik=profilKPw::where('kepegawaian','like','organik')->paginate(5);
+		$countorganik=profilKPw::where('kepegawaian','like','organik')->count();
+		$nonorganik=profilKPw::where('kepegawaian','like','non organik')->paginate(5);
+		$countnonorganik=profilKPw::where('kepegawaian','like','non organik')->count();
 		return view('profilKpwTable', ['organik'=>$organik, 'nonorganik'=>$nonorganik, 'corganik'=>$countorganik, 'cnonorganik'=>$countnonorganik]);
 	}
 	public function viewDiagram(){
         $data = DB::table('profilkpw')
            ->select(
-            DB::raw('status as status'),
+            DB::raw('kepegawaian as kepegawaian'),
             DB::raw('count(*) as number'))
-           ->groupBy('status')
+           ->groupBy('kepegawaian')
            ->get();
         $array[] = ['Status', 'Number'];
         foreach($data as $key => $value)
         {
-          $array[++$key] = [$value->status, $value->number];
+          $array[++$key] = [$value->kepegawaian, $value->number];
         }
 
         return view('profilKpwDiagram')->with('course', json_encode($array));
 	}
 	public function insertkpw(Request $req){
 		$users=$req->validate([
-            'nip' => ['required','size:5'],
+            'nip' => ['required'],
             'nama' => ['required','string'],
-            'gender' => ['required'],
-            'alamat' => ['required'],
-            'dob' => ['required'],
-            'stat'=>['required'],
+            'unitkerja' => ['required'],
+            'kepegawaian' => ['required'],
+            'status'=>['required'],
         ]);
         $users=profilKPw::create([
             'nip' => $users['nip'],
             'nama'=>$users['nama'],
-            'jeniskelamin'=>$users['gender'],
-            'alamat'=>$users['alamat'],
-			'tanggallahir'=>$users['dob'],
-            'status'=>$users['stat'],
+            'unitkerja'=>$users['unitkerja'],
+            'status'=>$users['status'],
+            'kepegawaian'=>$users['kepegawaian'],
         ]);
         $users->save();
 		Session::flash('sukses','Data Berhasil Dimasukkan!');

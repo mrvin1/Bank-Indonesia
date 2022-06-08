@@ -92,31 +92,25 @@
 									</div>
 								</div>
 								<div class="form-group">
-									<label for="password-confirm">Jenis Kelamin:</label>
+									<label for="password-confirm">Status</label>
 									<div class="col-md-6">
-										<input type="radio" name="gender" value="Laki-laki"> Laki-laki
-										<input type="radio" name="gender" value="Perempuan"> Perempuan
+										<input type="radio" name="status" value="SINGLE"> Single
+										<input type="radio" name="status" value="MENIKAH"> Menikah
 									</div>
 								</div>
 								<div class="form-group">
-									<label for="password-confirm">Alamat:</label>
+									<label for="password-confirm">Unit Kerja:</label>
 									<div class="col-md-6">
-										<textarea name="alamat" id="alamat" rows="2" cols="50" required></textarea>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="password-confirm">Tanggal Lahir:</label>
-									<div class="col-md-6">
-										<input type="date" name="dob" id="dob" required>
+										<input id="unitkerja" type="text" class="form-control" name="unitkerja" required autofocus>
 									</div>
 								</div>
 								<div class="form-group">
 									<label for="password-confirm">Status Pegawai:</label>
 									<div class="col-md-6">
-										<select name="stat" id="stat" required>
+										<select name="kepegawaian" id="kepegawaian" required>
 											<option value=""></option>
-											<option value="Organik">Organik</option>
-											<option value="Non-Organik">Non-Organik</option>
+											<option value="ORGANIK">Organik</option>
+											<option value="NON ORGANIK">Non Organik</option>
 										</select>
 									</div>
 								</div>

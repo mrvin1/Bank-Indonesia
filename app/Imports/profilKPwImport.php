@@ -14,7 +14,7 @@ class profilKPwImport implements ToModel, WithStartRow
     */
     public function startRow(): int
     {
-        return 2;
+        return 5;
     }
     public function transformDate($value, $format = 'Y-m-d')
 {
@@ -27,12 +27,11 @@ class profilKPwImport implements ToModel, WithStartRow
     public function model(array $row)
     {
         return new profilKPw([
-            'nip'=>$row[0],
             'nama'=>$row[1],
-            'jeniskelamin'=>$row[2],
-            'alamat'=>$row[3],
-            'tanggallahir'=>$this->transformDate($row[4]),
-            'status'=>$row[5],
+            'unitkerja'=>$row[2],
+            'status'=>$row[3],
+            'kepegawaian'=>$row[4],
+            'nip'=>$row[5],
         ]);
     }
 }

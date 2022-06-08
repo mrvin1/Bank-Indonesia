@@ -18,9 +18,8 @@ class Profilkpw extends Migration
             $table->id();
             $table->string('nip');
             $table->string('nama');
-            $table->string('jeniskelamin');
-            $table->longText('alamat');
-            $table->date('tanggallahir');
+            $table->string('unitkerja');
+            $table->string('kepegawaian');
             $table->string('status');
         });
     }
