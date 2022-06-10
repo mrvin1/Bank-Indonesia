@@ -20,6 +20,8 @@ class DatabaseSeeder extends Seeder
             JenisikuSeeder::class,
             IndikatorikuSeeder::class,
             IkuSeeder::class,
+            LapanganUsahaSeeder::class,
+            PengeluaranSeeder::class,
         ]);
     }
 }

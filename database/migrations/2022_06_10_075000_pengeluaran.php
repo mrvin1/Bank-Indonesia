@@ -15,12 +15,14 @@ class Pengeluaran extends Migration
     {
         Schema::create('pengeluaran', function (Blueprint $table) {
             $table->id();
-            $table->string('rumahtangga');
-            $table->string('lnprt');
-            $table->string('pemerintah');
-            $table->string('bruto');
-            $table->string('inventori');
-            $table->string('eksporbarangjasa');
+            $table->string('wilayah');
+            $table->decimal('rumahtangga',5,2);
+            $table->decimal('lnprt',5,2);
+            $table->decimal('pemerintah',5,2);
+            $table->decimal('bruto',5,2);
+            $table->decimal('inventori',5,2);
+            $table->decimal('eksporbarangjasa',5,2);
+            $table->decimal('pdrb',5,2);
         });
     }
 

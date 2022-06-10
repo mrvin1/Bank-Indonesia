@@ -16,10 +16,10 @@ class Lapanganusaha extends Migration
         Schema::create('lapanganusaha', function (Blueprint $table) {
             $table->id();
             $table->string('wilayah');
-            $table->string('industripengolahan');
-            $table->string('perdagangan');
-            $table->string('pertanian');
-            $table->string('konstruksi');
+            $table->decimal('industripengolahan',5,2);
+            $table->decimal('perdagangan',5,2);
+            $table->decimal('pertanian',5,2);
+            $table->decimal('konstruksi',5,2);
         });
     }
 

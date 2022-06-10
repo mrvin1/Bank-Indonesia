@@ -47,7 +47,7 @@
 				<form method="post" action="" enctype="multipart/form-data">
 					
 						<div class="modal-header">
-							<h5 class="modal-title" id="exampleModalLabel">Masukkan data lapangan usaha</h5>
+							<h5 class="modal-title" id="exampleModalLabel">Masukkan data lapangan usaha dalam persentase</h5>
 						</div>
 						<div class="modal-body">
 							{{ csrf_field() }}
@@ -56,6 +56,7 @@
                                 <div class="col-md-6">
                                     <select name="wil" id="wil" required>
                                         <option value=""></option>
+										<option value="Jawa Tengah">Jawa Tengah</option>
                                         <option value="Banyumas">Banyumas</option>
                                         <option value="Banjarnegara">Banjarnegara</option>
                                         <option value="Cilacap">Cilacap</option>
@@ -102,7 +103,7 @@
 				<div class="modal-content">
 				<form method="post" action="" enctype="multipart/form-data">
 						<div class="modal-header">
-							<h5 class="modal-title" id="exampleModalLabel">Masukkan Data Pengeluaran</h5>
+							<h5 class="modal-title" id="exampleModalLabel">Masukkan Data Pengeluaran dalam persentase</h5>
 						</div>
 						<div class="modal-body">
 							{{ csrf_field() }}
@@ -111,6 +112,7 @@
                                 <div class="col-md-6">
                                     <select name="wil" id="wil" required>
                                         <option value=""></option>
+										<option value="Jawa Tengah">Jawa Tengah</option>
                                         <option value="Banyumas">Banyumas</option>
                                         <option value="Banjarnegara">Banjarnegara</option>
                                         <option value="Cilacap">Cilacap</option>
@@ -155,7 +157,12 @@
 										<input id="bj" type="number" class="form-control" name="bj" required autofocus>
 									</div>
 								</div>
-							
+								<div class="form-group">
+									<label for="password-confirm">PRODUK DOMESTIK REGIONAL BRUTO (PDRB)</label>
+									<div class="col-md-6">
+										<input id="pdrb" type="number" class="form-control" name="pdrb" required autofocus>
+									</div>
+								</div>
  
 						<div class="modal-footer">
 							<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
