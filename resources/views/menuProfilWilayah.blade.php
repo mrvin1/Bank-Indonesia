@@ -44,7 +44,7 @@
 		<div class="modal fade" id="lapanganusaha" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
-				<form method="post" action="" enctype="multipart/form-data">
+				<form method="post" action="{{route('updatelu')}}" enctype="multipart/form-data">
 					
 						<div class="modal-header">
 							<h5 class="modal-title" id="exampleModalLabel">Masukkan data lapangan usaha dalam persentase</h5>
@@ -67,25 +67,25 @@
 								<div class="form-group">
 									<label for="password-confirm">Industri Pengolahan:</label>
 									<div class="col-md-6">
-										<input id="pengolahan" type="number" class="form-control" name="pengolahan" required autofocus>
+										<input id="pengolahan" type="number" step="any" class="form-control" name="pengolahan" required autofocus>
 									</div>
 								</div>
 								<div class="form-group">
 									<label for="password-confirm">Perdagangan:</label>
 									<div class="col-md-6">
-										<input id="perdagangan" type="number" class="form-control" name="perdagangan" required autofocus>
+										<input id="perdagangan" type="number" step="any" class="form-control" name="perdagangan" required autofocus>
 									</div>
-								</div>
+								</div> 
                                 <div class="form-group">
 									<label for="password-confirm">Pertanian:</label>
 									<div class="col-md-6">
-										<input id="pertanian" type="number" class="form-control" name="pertanian" required autofocus>
+										<input id="pertanian" type="number" step="any" class="form-control" name="pertanian" required autofocus>
 									</div>
 								</div>
                                 <div class="form-group">
 									<label for="password-confirm">Konstruksi:</label>
 									<div class="col-md-6">
-										<input id="konstruksi" type="number" class="form-control" name="konstruksi" required autofocus>
+										<input id="konstruksi" type="number" step="any" class="form-control" name="konstruksi" required autofocus>
 									</div>
 								</div>
 						<div class="modal-footer">
@@ -101,7 +101,7 @@
 		<div class="modal fade" id="pengeluaran" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
-				<form method="post" action="" enctype="multipart/form-data">
+				<form method="post" action="{{route('updatePengeluaran')}}" enctype="multipart/form-data">
 						<div class="modal-header">
 							<h5 class="modal-title" id="exampleModalLabel">Masukkan Data Pengeluaran dalam persentase</h5>
 						</div>
@@ -124,43 +124,43 @@
 								<div class="form-group">
 									<label for="password-confirm">Pengeluaran Konsumsi Rumah tangga</label>
 									<div class="col-md-6">
-										<input id="rt" type="number" class="form-control" name="rt" required autofocus>
+										<input id="rt" type="number" step="any" class="form-control" name="rt" required autofocus>
 									</div>
 								</div>
                                 <div class="form-group">
 									<label for="password-confirm">Pengeluaran Konsumsi LNPRT</label>
 									<div class="col-md-6">
-										<input id="lnprt" type="number" class="form-control" name="lnprt" required autofocus>
+										<input id="lnprt" type="number" step="any" class="form-control" name="lnprt" required autofocus>
 									</div>
 								</div>
                                 <div class="form-group">
 									<label for="password-confirm">Pengeluaran Konsumsi Pemerintah</label>
 									<div class="col-md-6">
-										<input id="pemerintah" type="number" class="form-control" name="pemerintah" required autofocus>
+										<input id="pemerintah" type="number" step="any" class="form-control" name="pemerintah" required autofocus>
 									</div>
 								</div>
                                 <div class="form-group">
 									<label for="password-confirm">Pembentukan Modal Tetap Bruto</label>
 									<div class="col-md-6">
-										<input id="bruto" type="number" class="form-control" name="bruto" required autofocus>
+										<input id="bruto" type="number" step="any" class="form-control" name="bruto" required autofocus>
 									</div>
 								</div>
                                 <div class="form-group">
 									<label for="password-confirm">Perubahan inventori</label>
 									<div class="col-md-6">
-										<input id="inventori" type="number" class="form-control" name="inventori" required autofocus>
+										<input id="inventori" type="number" step="any" class="form-control" name="inventori" required autofocus>
 									</div>
 								</div>
                                 <div class="form-group">
 									<label for="password-confirm">Net Ekspor Barang dan Jasa</label>
 									<div class="col-md-6">
-										<input id="bj" type="number" class="form-control" name="bj" required autofocus>
+										<input id="bj" type="number" step="any" class="form-control" name="bj" required autofocus>
 									</div>
 								</div>
 								<div class="form-group">
 									<label for="password-confirm">PRODUK DOMESTIK REGIONAL BRUTO (PDRB)</label>
 									<div class="col-md-6">
-										<input id="pdrb" type="number" class="form-control" name="pdrb" required autofocus>
+										<input id="pdrb" type="number" step="any" class="form-control" name="pdrb" required autofocus>
 									</div>
 								</div>
  

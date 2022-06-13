@@ -63,7 +63,8 @@ Route::post('/kpwinsert', [App\Http\Controllers\ProfilKpwController::class, 'ins
 
 Route::get('/wildiagramlu', [App\Http\Controllers\ProfilWilayahKerjaController::class, 'viewDiagramlu'])->name('viewDiagramWillu')->middleware('user');
 Route::get('/wildiagrampengeluaran', [App\Http\Controllers\ProfilWilayahKerjaController::class, 'viewDiagramPengeluaran'])->name('viewDiagramWilPengeluaran')->middleware('user');
-
+Route::post('/updatewillu', [App\Http\Controllers\ProfilWilayahKerjaController::class, 'updatelu'])->name('updatelu')->middleware('user');
+Route::post('/updatepengeluaran', [App\Http\Controllers\ProfilWilayahKerjaController::class, 'updatePengeluaran'])->name('updatePengeluaran')->middleware('user');
 
 
 Route::post('/import_excel', [App\Http\Controllers\ProfilKpwController::class, 'import_excel'])->name('import_excel')->middleware('user');
