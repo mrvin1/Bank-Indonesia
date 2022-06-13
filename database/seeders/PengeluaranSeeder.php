@@ -20,8 +20,8 @@ class PengeluaranSeeder extends Seeder
             'lnprt'=>'2.27',
             'pemerintah'=>'2.19',
             'bruto'=>'7.54',
-            'inventori'=>'-28.43',
-            'eksporbarangjasa'=>'-0.50',
+            'inventori'=>'0.00',
+            'eksporbarangjasa'=>'0.00',
             'pdrb'=>'4.00'
          ]);
          pengeluaran::create([
@@ -30,8 +30,8 @@ class PengeluaranSeeder extends Seeder
             'lnprt'=>'1.12',
             'pemerintah'=>'0.63',
             'bruto'=>'6.76',
-            'inventori'=>'-33.17',
-            'eksporbarangjasa'=>'-17.02',
+            'inventori'=>'0.00',
+            'eksporbarangjasa'=>'0.00',
             'pdrb'=>'3.26'
          ]);
          pengeluaran::create([
@@ -40,7 +40,7 @@ class PengeluaranSeeder extends Seeder
             'lnprt'=>'1.23',
             'pemerintah'=>'0.83',
             'bruto'=>'5.55',
-            'inventori'=>'-31.26',
+            'inventori'=>'0.00',
             'eksporbarangjasa'=>'1.74',
             'pdrb'=>'2.15'
          ]);
@@ -50,8 +50,8 @@ class PengeluaranSeeder extends Seeder
             'lnprt'=>'1.20',
             'pemerintah'=>'0.76',
             'bruto'=>'6.11',
-            'inventori'=>'-28.12',
-            'eksporbarangjasa'=>'-43.57',
+            'inventori'=>'0.00',
+            'eksporbarangjasa'=>'0.00',
             'pdrb'=>'3.19'
          ]);
          

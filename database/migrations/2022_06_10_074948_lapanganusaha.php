@@ -15,7 +15,7 @@ class Lapanganusaha extends Migration
     {
         Schema::create('lapanganusaha', function (Blueprint $table) {
             $table->id();
-            $table->string('wilayah');
+            $table->string('wilayah');;
             $table->decimal('industripengolahan',5,2);
             $table->decimal('perdagangan',5,2);
             $table->decimal('pertanian',5,2);
