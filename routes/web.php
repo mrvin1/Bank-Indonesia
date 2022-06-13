@@ -24,6 +24,14 @@ Route::get('getindikator/{id}',function($id){
     return response()->json($indikator);
 })->middleware('user');
 
+
+Route::get('getlu/{id}',function($id){
+    $lu = App\Models\lapanganUsaha::where('wilayah',$id)->first();
+    return response()->json($lu);
+})->middleware('user');
+
+
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('user');
 Route::get('/notice', [App\Http\Controllers\AnnouncementController::class, 'viewAnnouncement'])->name('notice')->middleware('user');
 Route::get('/accountmanager', [App\Http\Controllers\AccountManagementController::class, 'viewList'])->name('accountManager')->middleware('admin');
