@@ -54,6 +54,15 @@ class PengeluaranSeeder extends Seeder
             'eksporbarangjasa'=>'0.00',
             'pdrb'=>'3.19'
          ]);
-         
+         pengeluaran::create([
+            'wilayah'=>'Jawa Tengah',
+            'rumahtangga'=>'0',
+            'lnprt'=>'0',
+            'pemerintah'=>'0',
+            'bruto'=>'0',
+            'inventori'=>'0.00',
+            'eksporbarangjasa'=>'0.00',
+            'pdrb'=>'0'
+         ]);
     }
 }

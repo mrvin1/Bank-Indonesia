@@ -110,7 +110,7 @@
                             <div class="form-group">
                                 <label for="password-confirm">Wilayah/Kabupaten:</label>
                                 <div class="col-md-6">
-                                    <select name="wil" id="wil" required>
+                                    <select name="wila" id="wila" required>
                                         <option value=""></option>
 										<option value="Jawa Tengah">Jawa Tengah</option>
                                         <option value="Banyumas">Banyumas</option>
@@ -203,6 +203,38 @@
 								$('#perdagangan').val(data.perdagangan)
 								$('#pertanian').val(data.pertanian)
 								$('#konstruksi').val(data.konstruksi)								
+                     		}
+                   		}
+               
+            });
+		}
+            });
+		});
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+            $(document).ready(function() {
+            $('#wila').on('change', function() {
+               var wilayah = $(this).val();
+			   
+               if(wilayah) {
+                   $.ajax({
+                       url: 'getpengeluaran/'+wilayah,
+                       type: "GET",
+                       dataType: "json",
+                       success:function(data)
+                       {
+							if(data){
+								$('#rt').val(data.rumahtangga)
+								$('#lnprt').val(data.lnprt)
+								$('#pemerintah').val(data.pemerintah)
+								$('#bruto').val(data.bruto)
+								$('#inventori').val(data.inventori)
+								$('#bj').val(data.eksporbarangjasa)
+								$('#pdrb').val(data.pdrb)
+								
                      		}
                    		}
                

@@ -30,6 +30,10 @@ Route::get('getlu/{id}',function($id){
     return response()->json($lu);
 })->middleware('user');
 
+Route::get('getpengeluaran/{id}',function($id){
+    $lu = App\Models\pengeluaran::where('wilayah',$id)->first();
+    return response()->json($lu);
+})->middleware('user');
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('user');
