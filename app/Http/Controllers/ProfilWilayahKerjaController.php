@@ -29,14 +29,18 @@ class ProfilWilayahKerjaController extends Controller
             'pertanian' => ['required'],
             'konstruksi'=>['required'],
         ]);
-        $lapanganusaha= DB::table('lapanganusaha')->where('wilayah',$lu['wil'])->update(['industripengolahan'=>$lu['pengolahan'],'perdagangan'=>$lu['perdagangan'],'pertanian'=>$lu['pertanian'],'konstruksi'=>$lu['konstruksi']]);
+        $lapanganusaha = lapanganUsaha::updateOrCreate(
+            ['wilayah' => $lu['wil']], 
+                ['industripengolahan'=>$lu['pengolahan'],'perdagangan'=>$lu['perdagangan'],'pertanian'=>$lu['pertanian'],'konstruksi'=>$lu['konstruksi']]
+        );
+        //$lapanganusaha= DB::table('lapanganusaha')->where('wilayah',$lu['wil'])->update(['industripengolahan'=>$lu['pengolahan'],'perdagangan'=>$lu['perdagangan'],'pertanian'=>$lu['pertanian'],'konstruksi'=>$lu['konstruksi']]);
         Session::flash('sukses','Data Berhasil Dimasukkan!');
         return redirect()->back();
     }
 
     public function updatePengeluaran(Request $req){
 		$pengeluaran=$req->validate([
-            'wil' => ['required'],
+            'wila' => ['required'],
             'rt' => ['required'],
             'lnprt' => ['required'],
             'pemerintah' => ['required'],
@@ -45,7 +49,11 @@ class ProfilWilayahKerjaController extends Controller
             'bj'=>['required'],
             'pdrb'=>['required'],
         ]);
-        $lapanganusaha= DB::table('pengeluaran')->where('wilayah',$pengeluaran['wil'])->update(['rumahtangga'=>$pengeluaran['rt'],'lnprt'=>$pengeluaran['lnprt'],'pemerintah'=>$pengeluaran['pemerintah'],'bruto'=>$pengeluaran['bruto'],'inventori'=>$pengeluaran['inventori'],'eksporbarangjasa'=>$pengeluaran['bj'],'pdrb'=>$pengeluaran['pdrb']]);
+        $pengeluaran = pengeluaran::updateOrCreate(
+            ['wilayah' => $pengeluaran['wila']], 
+            ['rumahtangga'=>$pengeluaran['rt'],'lnprt'=>$pengeluaran['lnprt'],'pemerintah'=>$pengeluaran['pemerintah'],'bruto'=>$pengeluaran['bruto'],'inventori'=>$pengeluaran['inventori'],'eksporbarangjasa'=>$pengeluaran['bj'],'pdrb'=>$pengeluaran['pdrb']]
+        );
+        //$lapanganusaha= DB::table('pengeluaran')->where('wilayah',$pengeluaran['wila'])->update(['rumahtangga'=>$pengeluaran['rt'],'lnprt'=>$pengeluaran['lnprt'],'pemerintah'=>$pengeluaran['pemerintah'],'bruto'=>$pengeluaran['bruto'],'inventori'=>$pengeluaran['inventori'],'eksporbarangjasa'=>$pengeluaran['bj'],'pdrb'=>$pengeluaran['pdrb']]);
         Session::flash('sukses','Data Berhasil Dimasukkan!');
         return redirect()->back();
     }
