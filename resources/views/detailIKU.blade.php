@@ -29,11 +29,16 @@
                     <td>
                         <label for="password-confirm">Periode: </label>
                         {{date('d-m-Y', strtotime($iku->periode));}}&emsp;
-                    </td>
+                    </td> <br>
+                    <td>
+                        <label for="password-confirm">Tanggal Update: </label>
+                        {{$iku->updated_at}}
+                    </td><br>
                     <td>
                         <label for="password-confirm">Jenis IKU: </label>
                         {{$jenis->jenisdesc}}
-                    </td>
+                    </td><br>
+                    
                 </tr>
                 <hr style="border-width: 1px; border-color: black">
                 <tr>
