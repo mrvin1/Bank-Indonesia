@@ -30,8 +30,6 @@
     <div class="container-fluid p-5">
     <div id="barchart_material" style="width: 100%; height: 500px;"></div>
     </div>
-   
-
 
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
@@ -46,10 +44,9 @@
             @php
               foreach($lu as $luu) {
                   echo "['".$luu->wilayah."', ".$luu->industripengolahan.", ".$luu->perdagangan.",".$luu->pertanian.",".$luu->konstruksi."],";
-              }
+                }
             @endphp
         ]);
-
         var options = {
           chart: {
             title: 'Pertumbuhan Lapangan Usaha',
