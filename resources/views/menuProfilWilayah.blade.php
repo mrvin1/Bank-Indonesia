@@ -112,11 +112,11 @@
                                 <div class="col-md-6">
                                     <select name="wila" id="wila" required>
                                         <option value=""></option>
-										<option value="Jawa Tengah">Jawa Tengah</option>
                                         <option value="Banyumas">Banyumas</option>
                                         <option value="Banjarnegara">Banjarnegara</option>
                                         <option value="Cilacap">Cilacap</option>
                                         <option value="Purbalingga">Purbalingga</option>
+										<option value="Jawa Tengah">Jawa Tengah</option>
                                     </select>
                                 </div>
                             </div>
