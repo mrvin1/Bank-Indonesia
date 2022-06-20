@@ -38,6 +38,10 @@
                         <label for="password-confirm">Jenis IKU: </label>
                         {{$jenis->jenisdesc}}
                     </td><br>
+                    <td>
+                        <label for="password-confirm">Pengubah: </label>
+                        {{$iku->name}}
+                    </td><br>
                     
                 </tr>
                 <hr style="border-width: 1px; border-color: black">

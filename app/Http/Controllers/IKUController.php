@@ -7,6 +7,7 @@ use App\Models\IKU;
 use App\Models\indikatorIKU;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class IKUController extends Controller
 {
@@ -87,6 +88,7 @@ class IKUController extends Controller
             'realisasi'=>$iku['realisasi'],
             'status'=>$iku['track'],
             'keterangan'=>$iku['ket'],
+            'name'=>auth()->user()->name,
         ]);
         $iku->save();
         return redirect('listiku');
@@ -116,7 +118,7 @@ class IKUController extends Controller
             'ket'=>['required'],
         ]);
         $ikuu = DB::table('ikus')->where('ikuid', $idx)->update(['periode'=>$iku['periode'],'indikator'=>$iku['indikator'],'realisasi'=>$iku['realisasi'],
-        'status'=>$iku['track'], 'keterangan'=>$iku['ket']]);
+        'status'=>$iku['track'], 'keterangan'=>$iku['ket'], 'name'=>auth()->user()->name]);
         return redirect('listiku');
     }
 }

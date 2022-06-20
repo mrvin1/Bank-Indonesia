@@ -11,6 +11,7 @@
             <th>Realisasi</th>
             <th>Status</th>
             <th>Keterangan</th>
+            <th>Pengubah</th>
         </tr>
     </thead>
     <tbody>
@@ -26,6 +27,7 @@
                 <td>{{ $dt->realisasi}}</td>
                 <td>{{ $dt->status}}</td>
                 <td>{{ $dt->keterangan}}</td>
+                <td>{{ $dt->name}}</td>
             </tr>
         @endforeach
     </tbody>

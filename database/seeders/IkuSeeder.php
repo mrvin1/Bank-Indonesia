@@ -21,6 +21,7 @@ class IkuSeeder extends Seeder
             'status'=>'On Track',
             'keterangan'=>'Telah dilaksanakan HLM TPID Banyumas pada tanggal 12 Februari 2022 untuk membahas isu kelangkaan dan inflasi pada komoditas minyak goreng yang didahului dengan sidak ke distributor minyak goreng di Purwokerto.',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'2',
@@ -32,6 +33,7 @@ class IkuSeeder extends Seeder
             Untuk memastikan efektivitas pelaksanaannya, maka pedagang diwajibkan menandatangani surat pernyataan untuk mengikuti HET.
             ',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'3',
@@ -39,6 +41,7 @@ class IkuSeeder extends Seeder
             'status'=>'On Track',
             'keterangan'=>'Telah melakukan survei terhadap umkm pangan potensial di 3 Kabupaten yaitu Gapoktan Karya Tani Cilacap, Kelompok Tani Marsudi Among Tani Cilacap dan Gapoktan Mekar Tani Purbalingga serta telah dilakukan penjajakan melalui zoom meeting dengan Praktisi Digital Farming yaitu Bpk Andri dari Semarang yang telah mengembangkan program digital farming berbasis web dengan nama Parijatayu.',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'4',
@@ -46,6 +49,7 @@ class IkuSeeder extends Seeder
             'status'=>'On Track',
             'keterangan'=>'Penjajakan b-to-b KAD antara KTT Lembu Sari Cilacap dengan Koperasi Cahaya Mandiri Jaya NTT telah dilakukan pada Februari 2022. Penandatanganan MoU direncanakan pada Maret 2022.',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'5',
@@ -53,6 +57,7 @@ class IkuSeeder extends Seeder
             'status'=>'On Track',
             'keterangan'=>'Penyusunan PKS baru antara Gapoktan Sumber Makmur Maos Kidul dengan PT. Food Station dengan menambahkan komoditas beras merah masih on progress. Penandatanganan akan dilaksanakan pada bulan April 2022',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'6',
@@ -60,6 +65,7 @@ class IkuSeeder extends Seeder
             'status'=>' ',
             'keterangan'=>' ',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'7',
@@ -67,6 +73,7 @@ class IkuSeeder extends Seeder
             'status'=>'On Track',
             'keterangan'=>'Pelaksanaan OnBoarding terhadap 24 UMKM akan dilaksanakan pada Minggu I April 2022. Per Februari 2022 telah dilakukan penjajakan kepada calon pemateri dan vendor pelaksana kegiatan sebanyak 4 kandidat. Sementara itu, kurasi UMKM peserta on boarding akan dilakukan secara mandiri oleh KPw.',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'8',
@@ -74,6 +81,7 @@ class IkuSeeder extends Seeder
             'status'=>'On Track',
             'keterangan'=>'Program korporatisasi ditargetkan selesai pada bulan Mei 2022. Sampai dengan Februari 2022 telah dilaksanakan kurasi dan asesmen terhadap beberapa kelompok',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'9',
@@ -87,6 +95,7 @@ class IkuSeeder extends Seeder
             Bank Syariah Indonesia – 6 UMKM (Tersebar pada 4 Kabupaten)
             Bank Rakyat Indonesia – 26 UMKM (Tersebar pada 4 Kabupaten)',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'10',
@@ -100,6 +109,7 @@ class IkuSeeder extends Seeder
                 b. Pengiriman sampel produk kopi kailasa kepada potensial buyer yang difasilitasi oleh DUPK"
                 ',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'11',
@@ -108,6 +118,7 @@ class IkuSeeder extends Seeder
             'keterangan'=>'Program Pengembangan UMKM Subsisten KUBE Legen Sari (Banyumas):
             Pada tanggal 23 Februari 2022, KUBE Legen Sari telah mengikuti pelatihan Penyuluh Keamanan Pangan sebagai syarat pembuatan PIRT sebagai salah satu jaminan kepada konsumen terkait produk gula semut yang diproduksi. Target selanjutnya yaitu pengurusan PIRT dan Halal.',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          //18
          IKU::create([
@@ -117,6 +128,7 @@ class IkuSeeder extends Seeder
             'keterangan'=>'Kurasi KKI 2022 :
             Pada bulan Februari telah dilakukan pendaftaran UMKM guna pelaksanaan KKI 2022 yang dilakukan bersinergi dengan KPw Se Jawa Tengah. Jumlah UMKM diwilayah eks Karesidenan Banyumas yang mendaftar sebanyak 209 UMKM. Pada bulan maret akan dilakukan seleksi tahap dua menjadi 50 UMKM terpilih yang selanjutnya akan dikurasi secara offline.',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'13',
@@ -124,6 +136,7 @@ class IkuSeeder extends Seeder
             'status'=>'On Track',
             'keterangan'=>'Telah dilaksanakan edukasi ekonomi dan keuangan inklusif pada tanggal 11 Februari 2022 terhadap 123 peserta secara hybrid. 36 peserta enumerator survei dari STIE Muhammadiyah Cilacap dan CV. Mitra Lestari Risetindo hadir secara offline di Hotel Braling Purbalingga dan 87 Peserta dari GenBI hadir secara online melalui platform zoom meeting.',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'14',
@@ -134,6 +147,7 @@ class IkuSeeder extends Seeder
             Bank Syariah Indonesia – 6 UMKM (Tersebar pada 4 Kabupaten)
             Bank Rakyat Indonesia – 26 UMKM (Tersebar pada 4 Kabupaten)',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          //21
          IKU::create([
@@ -142,6 +156,7 @@ class IkuSeeder extends Seeder
             'status'=>'On Track',
             'keterangan'=>'Hingga bulan februari 2022 belum terdapat pengaduan konsumen',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'16',
@@ -150,6 +165,7 @@ class IkuSeeder extends Seeder
             'keterangan'=>'- Telah menyampaikan kompilasi laporan pengawasan bulan Juli-Desember 2022
             - Akan dilakukan sosialisasi dan capacity building mengenai TPPu & TPPT pada bulan April 2022',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'17',
@@ -157,6 +173,7 @@ class IkuSeeder extends Seeder
             'status'=>'On Track',
             'keterangan'=>'Telah dilaksanakan pemeriksaan kepada 3 KUPVA BB (PT. ABS, PT. WAJ dan PT. SAMC, dan hasil temuan sudah ditindaklanjuti sesuai jatuh tempo',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'18',
@@ -164,6 +181,7 @@ class IkuSeeder extends Seeder
             'status'=>'On Track',
             'keterangan'=>'Telah dilaksanakan DEWEJANG DIGITAL I, merupakan sosialisasi transaksi digital kepada surveyor rekanan KPwBI Purwokerto dan Mahasiswa Unsoed dan STIE Cilacap berjumlah 124 orang. Pada akhir acara telah dilaksanakan survey pemahaman kepada seluruh peserta dengan tingkat pemahaman sebesar 81%',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'19',
@@ -171,6 +189,7 @@ class IkuSeeder extends Seeder
             'status'=>'On Track',
             'keterangan'=>'Telah dilaksanakan DEWEJANG DIGITAL I, merupakan sosialisasi transaksi digital kepada surveyor rekanan KPwBI Purwokerto dan Mahasiswa Unsoed dan STIE Cilacap berjumlah 124 orang. Pada akhir acara telah dilaksanakan survey pemahaman kepada seluruh peserta dengan tingkat pemahaman sebesar 81%',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'20',
@@ -178,6 +197,7 @@ class IkuSeeder extends Seeder
             'status'=>'On Track',
             'keterangan'=>'Telah dilaksanakan DEWEJANG DIGITAL I, merupakan sosialisasi transaksi digital kepada surveyor rekanan KPwBI Purwokerto dan Mahasiswa Unsoed dan STIE Cilacap berjumlah 124 orang. Pada akhir acara telah dilaksanakan survey pemahaman kepada seluruh peserta dengan tingkat pemahaman sebesar 81%',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'21',
@@ -217,6 +237,7 @@ class IkuSeeder extends Seeder
             UPK 698.983, Realisasi 33.090 (4.73%"
             ',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          //30
          IKU::create([
@@ -231,6 +252,7 @@ class IkuSeeder extends Seeder
             Realisasi Jan-Feb 2022 terhadap proyeksi Jan-Des 2022
             Target 66.600, Realisasi 13.010 (19,5%)',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'23',
@@ -239,6 +261,7 @@ class IkuSeeder extends Seeder
             'keterangan'=>'Deviasi s.d  Februari 20212adalah 0,05%
             Realisasi pemenuhan dibandingkan permintaan kebutuhan uang oleh perbankan pada bulan Februari r 2022 mengalami deviasi sebesar 0%, sedangkan dari bulan Januari s.d. Februari 2022 mengalami deviasi sebesar 0,05% dengan deviasi maksimal sebesar 10%. HSBC pada bulan JanuariI gagal melakukan penarikan karena reference code dari BISILK tidak terkirim ke CBS.',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'24',
@@ -246,6 +269,7 @@ class IkuSeeder extends Seeder
             'status'=>'On Track',
             'keterangan'=>'Direncanakan akan dilaksanakan  1 (satu) kali pada Bulan Maret 2022',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          //sampe kuning
          IKU::create([
@@ -254,6 +278,7 @@ class IkuSeeder extends Seeder
             'status'=>' ',
             'keterangan'=>' ',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'26',
@@ -261,6 +286,7 @@ class IkuSeeder extends Seeder
             'status'=>'On Track',
             'keterangan'=>'Sampai dengan bulan Februari 2022 sudah dilaksanakan CBP 1  (satu) kali pada bulan Januari, direncanakanpada bulan maret akan dilaksanakan CBP sebanyak 2 (dua) kali',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'27',
@@ -268,6 +294,7 @@ class IkuSeeder extends Seeder
             'status'=>'On Track',
             'keterangan'=>'Sampai dengan bulan Februari 2022 sudah dilaksanakan CBP 1  (satu) kali pada bulan Januari, direncanakanpada bulan maret akan dilaksanakan CBP sebanyak 2 (dua) kali',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'28',
@@ -275,6 +302,7 @@ class IkuSeeder extends Seeder
             'status'=>'On Track',
             'keterangan'=>'Sampai dengan bulan Februari 2022 sudah dilaksanakan CBP 1  (satu) kali pada bulan Januari, direncanakanpada bulan maret akan dilaksanakan CBP sebanyak 2 (dua) kali',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'29',
@@ -282,6 +310,7 @@ class IkuSeeder extends Seeder
             'status'=>'On Track',
             'keterangan'=>'Telah dilaksanakan Workshop TP2DD yang dihadiri oleh anggota TP2DD seluruh Kabupaten yang berada di wilayah Kerja. Tujuannya untuk menyusun peta jalan dan rencana kerja TP2DD dalam rangka mencapai predikat Pemda Digital. Dalam workshop ini juga dilaksanakan deklarasi Pemda Digital',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'30',
@@ -291,6 +320,7 @@ class IkuSeeder extends Seeder
             - Untuk mempersiapkan, secara rutin sudah dilakukan sosialisasi kepada tim teknis TP2DD untuk mempersiapkan data-data yang dibutuhkan
             - Melaksanakan workshop pengisian SIP2DD pada bulan Mei dan November',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'31',
@@ -302,6 +332,7 @@ class IkuSeeder extends Seeder
             3. Pembiayaan UMKM dengan skema SME Syariah Funding
             ',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'32',
@@ -313,6 +344,7 @@ class IkuSeeder extends Seeder
             3. PP. Roudlotul Ilmi (Banyumas) 
             4. PP.  Baitaul Quran As Suyuthi  Maribaya (Purbalingga)',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'33',
@@ -324,6 +356,7 @@ class IkuSeeder extends Seeder
             3. PP Darul Aitam Nurul Iman (Cilacap) : budidaya ayam berjalan dengan baik, rencana selanjutnya yaitu pembuatan Rumah Potong Ayam (RPA)
             4. PP At Taujieh Al Islamy : survey rencana program unit usaha pengolahan air minum (gedung prosesing dan pengemasan botol)',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'34',
@@ -331,6 +364,7 @@ class IkuSeeder extends Seeder
             'status'=>'On Track',
             'keterangan'=>'Telah dilaksanakan pengukuhan Pengurus Hebitren Korda Banyumas oleh Ketua Umum DPP Hebitren KH. Drs. Moh Hasib Wahab pada tanggal 26 Februari 2022 di Ponpes Miftahul Huda Rawalo Kab. Banyumas sesuai dengan Surat Keputusan DPP Hebitren No 002.001/SK-Korda/DPP-Hebitren/II/2022 tgl 22 Februari 2022 Tentang Pembentukan dan Susunan Personalia Pengurus Koordinator Daerah Himpunan Ekonomi Bisnis Pesantren (Korda Hebitren) Banyumas, Provinsi Jawa Tengah Untuk Pertama Kali Periode 2022-2027',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'35',
@@ -338,6 +372,7 @@ class IkuSeeder extends Seeder
             'status'=>'On Track',
             'keterangan'=>'Telah dilakukan kurasi dan penyampaian data sebanyak 25 UMKM yang akan diikutsertakan dalam proses sertifikasi layak halal bersama KPwBI Prov Jateng melalui Memo No 24/88/Pwt/M.01/B tgl 23 Februari 2022 perihal Sinergi Program Dalam Rangka Sertifikasi Halal Produk UMKM Binaan/ Mitra Kantor Perwakilan Bank Indonesia Se- Jawa Tengah Tahun 2022',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'36',
@@ -347,6 +382,7 @@ class IkuSeeder extends Seeder
             1. CV Kebontops/ PT. SOA (Banyumas)
             2. Abon Koki (Purbalingga)',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'37',
@@ -354,6 +390,7 @@ class IkuSeeder extends Seeder
             'status'=>'On Track',
             'keterangan'=>'Akan dilaksanakan FESMABI di bulan Agustus 2022 sebagai bagian dari Road To FESyar',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'38',
@@ -361,6 +398,7 @@ class IkuSeeder extends Seeder
             'status'=>'On Track',
             'keterangan'=>'Telah dilaksanakan edukasi ekonomi dan keuangan syariah kali yatu  pada tanggal 26 Februari 2022 terhadap 40  peserta yang terdiri dari santri dan pengurus RMI putri Kabupaten Banyumas .dengan hasil nilai pemahaman peserta sebesar 80,37 %',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'39',
@@ -368,6 +406,7 @@ class IkuSeeder extends Seeder
             'status'=>'On Track',
             'keterangan'=>'Pelaksanaan self governance dan pemantauan tahunan akan dilakukan pada periode Maret 2022. Area pemantauan pada triwulan I akan dilakukan pada 3 area utama yaitu pengadaan barang dan jasa, keuangan intern, serta pengelolaan aset.',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'40',
@@ -379,6 +418,7 @@ class IkuSeeder extends Seeder
             - Pembayaran bantuan PSBI Kecamatan Kampung Laut Rp.144.897.700,00 (Maret)
             - Pembayaran bantuan PSBI TK Aisyiah Rp.3.759.500 (Maret)',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          //52
          IKU::create([
@@ -388,6 +428,7 @@ class IkuSeeder extends Seeder
             'keterangan'=>'1. Pelaksanaan ISO Surveillance Arsip menunggu jadwal yang akan diinfromasikan oleh Satker CM.
             2. Sebagai langkah persiapan dalam rangka surveillance ISO Arsip, telah dilakukan penatausahaan dokumen secara mendiri dan melakukan penguatan dengan melakukan rekrutmen tenaga pedukung arsip dalam percepatan penyelesaian penatausahaan arsip.',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
 
          IKU::create([
@@ -396,6 +437,7 @@ class IkuSeeder extends Seeder
             'status'=>'On Track',
             'keterangan'=>'Telah disampaikan informasi dan rekomendasi mengenai pengembangan perekonomian dan inflasi kepada Pemerintah Daerah pada awal bulan Januari dan Februari 2022',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'43',
@@ -403,6 +445,7 @@ class IkuSeeder extends Seeder
             'status'=>'On Track',
             'keterangan'=>'Telah dilakukan penyusunan asesmen mengenai perkembangan inflasi Purwokerto dan Cilacap pada awal bulan Januari dan Februari 2022 serta mengenai isu strategis REKDA Januari 2022.',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
 
          IKU::create([
@@ -411,6 +454,7 @@ class IkuSeeder extends Seeder
             'status'=>'On Track',
             'keterangan'=>'Telah tersedianya net risk assesment AP PPT khususnya untuk KUPVA BB yang telah dilakukan pemeriksaan yaitu PT. ABS, PT. WAJ dan PT. SAMC',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'45',
@@ -422,6 +466,7 @@ class IkuSeeder extends Seeder
             Kualitas data Survei PIHPS Pedagang Besar (bobot : 25%) = 6
             ',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'46',
@@ -429,6 +474,7 @@ class IkuSeeder extends Seeder
             'status'=>'On Track',
             'keterangan'=>'Kegiatan liaison pada triwulan I-2022 telah berjalan 80%. Adapun laporan triwulanan akan disubmit pada tanggal 24 Maret 2022.',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'47',
@@ -440,6 +486,7 @@ class IkuSeeder extends Seeder
                 2. Terdapat program kerja pada beberapa unit yang masih berjalan dan belum dilakukan pembebanan anggaran dengan nominal yang realtif cukup besar."
                 ',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'48',
@@ -447,6 +494,7 @@ class IkuSeeder extends Seeder
             'status'=>'On Track',
             'keterangan'=>'Telah disusun rencana realisasi anggaran masing-masing unit kerja dengan target realisasi sebesar 90%',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'49',
@@ -454,6 +502,7 @@ class IkuSeeder extends Seeder
             'status'=>'On Track',
             'keterangan'=>'Tidak terdapat penarikan uang muka kegiatan pada periode Februari 2022',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'50',
@@ -461,6 +510,7 @@ class IkuSeeder extends Seeder
             'status'=>'On Track',
             'keterangan'=>'Jumlah Penarikan Uang Muka pada periode Februari 2022 yaitu sebanyak 26 Uang Muka. Dari jumlah tersebut, terdapat 4 uang muka yang belum dipertanggungjawabkan namun belum melebihi 7 hari kerja',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'51',
@@ -470,6 +520,7 @@ class IkuSeeder extends Seeder
             - 14 Februari 2022 untuk PPh Ps 23
             - 18 Februari 2022 untuk PPh Ps 21',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'52',
@@ -477,6 +528,7 @@ class IkuSeeder extends Seeder
             'status'=>'On Track',
             'keterangan'=>'Tidak terdapat transaksi cancel dari 67 transaksi pada periode Februari 2022.',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'53',
@@ -484,6 +536,7 @@ class IkuSeeder extends Seeder
             'status'=>'On Track',
             'keterangan'=>'Pada periode Februari 2022 telah dilakukan pemenuhan dokumen permintaan audit terkait dengan pengelolaan aset dan dokumen pengadaan asuransi. Sehubungan dengan hal tersebut, maka seluruh dokumen permintaan audit telah dipenuhi.',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'54',
@@ -493,6 +546,7 @@ class IkuSeeder extends Seeder
             2. Menghimbau kepada pegawai yang belum menyampaikan laporan LHKPN dengan target batas waktu penyelesaian pada minggu ke 3 Bulan Maret 2022"
             ',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'55',
@@ -500,6 +554,7 @@ class IkuSeeder extends Seeder
             'status'=>'On Track',
             'keterangan'=>'Seluruh pegawai telah menyampaikan Surat Pernyataan Tahunan dan telah dilaporkan kepada DSDM',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'56',
@@ -507,6 +562,7 @@ class IkuSeeder extends Seeder
             'status'=>'On Track',
             'keterangan'=>'Seluruh pegawai telah melakukan pengisian IKI akhir tahun periode tahun lalu. Sedangkan untuk pengisian IKI Tahunan pegawai masih dalam proses pengisian sesuai dengan batas waktu yang ditentukan',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
          IKU::create([
             'indikator'=>'57',
@@ -515,6 +571,7 @@ class IkuSeeder extends Seeder
             'keterangan'=>'- Melaksanakan stock opname secara periodik.
             - Pelaksanaan pelaporan penatusahaan untuk periode I dilakukan pada Bulan Juni 2022 dan/atau menunggu arahan Satker CM',
             'periode'=>$dt->setDateTime(2022, 2, 1, 11, 32, 5),
+            'name'=>'admin',
          ]);
     }
 }
