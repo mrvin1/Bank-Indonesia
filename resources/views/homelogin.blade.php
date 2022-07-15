@@ -68,7 +68,7 @@ a{
                         <div class="card">
                             <a href="{{route('viewBebarengan')}}"><img class="card-img-top" src="{{Storage::url('assetsweb/meeting.png')}}" alt="Card image cap"></a>
                             <div class="card-body">
-                                <h5 class="card-title">Bebarengan</h5>
+                                <h5 class="card-title">Bebareng</h5>
                             </div>
                         </div>
                 </div>
